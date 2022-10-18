@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./formulario-producto.css">
+    <title>Formulario de Registro de Producto</title>
+</head>
+
+<body>
+    <div class="contenedor-registro">
+        <form class="formulario">
+            <h1>Formulario de Registro</h1>
+            <input type="text" placeholder="Ingrese nombre del producto" class="nombre-producto">
+
+            <textarea name="descripcion" placeholder="ingrese la descripcion del producto"
+                class="descripcion-producto"></textarea>
+            <div>
+                <label for="imagen">Elegi las fotos de tu producto</label>
+                <input type="file" id="imagen" accept="image/*, .jpg, .png " class="subir-archivo">
+            </div>
+            <textarea name="intereses" placeholder="productos de tu interes" class="area-interes"></textarea>
+            <input type="button" value="Enviar Datos">
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -5,24 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Outfit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Assets -->
     <link rel="stylesheet" href="./formulario-producto.css">
-    <title>Formulario de Registro de Producto</title>
+    <!-- Title  --> 
+    <title>Publicar</title>
 </head>
 
 <body>
-    <div class="contenedor-registro">
-        <form class="formulario">
-            <h1>Formulario de Registro</h1>
-            <input type="text" placeholder="Ingrese nombre del producto" class="nombre-producto">
+    <!-- Container Formulario -->
+    <div class="contenido-prod">
 
-            <textarea name="descripcion" placeholder="ingrese la descripcion del producto"
-                class="descripcion-producto"></textarea>
-            <div>
-                <label for="imagen">Elegi las fotos de tu producto</label>
-                <input type="file" id="imagen" accept="image/*, .jpg, .png " class="subir-archivo">
+        <section class="producto" style="margin-left: 3em;">
+            <h1>SUBÍ TUS FOTOS</h1>
+
+            <div class="img-container">
+                <img src="" alt="...">
             </div>
-            <textarea name="intereses" placeholder="productos de tu interes" class="area-interes"></textarea>
-            <input type="button" value="Enviar Datos">
+            <div id="preview"></div>
+
+            <div class="subir">
+                <button>SELECCIONA TUS ARCHIVOS</button>
+                <input type="file" name="" id="file" hidden multiple>
+            </div>
+        </section>
+
+        <form class="formulario">
+            <h2>FORMULARIO DE PRODUCTO</h2>
+
+            <div class="info">
+                <label for="names">TÍTULO</label>
+                <input type="text" placeholder="Ingrese nombre del artículo" id="names" required>
+
+                <label for="descripcion">DESCRIPCIÓN</label>
+                <textarea id="descripcion" placeholder="Describí tu artículo" required ></textarea>
+
+                <label for="Interés">PREFERENCIAS</label>
+                <textarea id="Interés" placeholder="Preferencias de trueque"></textarea>
+ 
+                <input type="button" value="PUBLICAR" id="btnSend">
+            </div>
         </form>
     </div>
 

@@ -1,0 +1,53 @@
+/* header */
+.titulos h1{
+    padding: 20px;
+    text-align: center;
+    font-size: 29em;    
+}
+.titulos h3{
+    padding: 16px;
+    text-align: center; 
+    align-self: flex-start;  
+}
+
+
+.grid-quienes-somos {
+    width: 95%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+
+    display: grid;
+    gap: 1.6em;
+
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-quienes-somos > .primera-linea,
+.grid-quienes-somos > .vision-mision-valor,
+.grid-quienes-somos > .definicion-retrueque,
+.grid-quienes-somos > div {
+    background: rgb(77, 5, 245);
+    padding: 20px;
+    border: 1px solid black;
+    color:white;
+}
+
+.grid-quienes-somos > .primera-linea,
+.grid-quienes-somos > .definicion-retrueque{
+    grid-column: 1/4;
+    background: rgb(95, 5, 238);
+    color: black;
+}
+
+.grid-quienes-somos > .vision-mision-valor{
+    grid-column: span 3;
+}
+
+.vision-mision-valor > .articulos{
+    background: coral;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfdfdf;
+}
+
+

@@ -12,6 +12,9 @@ body{
 #h1{
     font-family: Righteous; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; color:rgb(7, 7, 7);
 }
+#h3{
+    font-family: Righteous; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; color:rgb(245, 245, 245);
+}
 
 a{
     text-decoration: none;
@@ -31,7 +34,7 @@ a{
 /* SECCION HEADER -  MENÚ Y PRESENTACION DE MARCA */
 .header {
     /* background-color: #000; */
-    background-image: url(img/mercancia.JPG);
+    background-image: url(/img/mercancia.JPG);
     /*url(https://i.postimg.cc/t4mHDsNJ/lauren-mancke-a-OC7-TSLb1o8-unsplash.jpg);*/
     background-position: center;
     background-size: cover;
@@ -123,6 +126,7 @@ a{
         align-items: center;
         justify-content: center;
         
+        
     }
         h1{
             /*background-color: rgba(247, 247, 8, 0.356);*/
@@ -152,17 +156,19 @@ a{
         flex-flow: column nowrap;
     }
     .bienvenida-uno{
-        height: auto;
+        height: 300PX;
+        color:white;
+
     }
         .bienvenida-uno h2{
             font-size: 80px;
             /* line-height: 1.3; */
-            color: black;
+            color: rgb(245, 244, 244);
             letter-spacing: 5px;
             font-weight: 700;
         }
     .bienvenida-dos{
-        color: rgb(8, 8, 8);
+        color: rgb(250, 248, 248);
         font-size: 15px;
     }
 
@@ -234,6 +240,7 @@ a{
             font-size: 40px; 
             font-weight: 500;
             color: rgba(212, 212, 212, 0.884);
+        
             
         }
 

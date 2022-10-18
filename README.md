@@ -18,7 +18,7 @@ Utilizamos distintas tecnologías para acompañar el trueque y hacer que funcion
 
 ### Screenshot
 
-[![ReTrueque]()
+[![cluster-web.png](https://i.postimg.cc/V6BcsyHN/cluster-web.png)](https://postimg.cc/sQXLKLzF)
 
 ### Links
 

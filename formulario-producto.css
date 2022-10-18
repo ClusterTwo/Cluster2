@@ -1,0 +1,36 @@
+.contenedor-registro{
+    display: block;
+    width: 60%;
+    margin: auto;
+    
+}
+
+.nombre-producto{
+    width: 90%;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    margin: 0 0 10px
+}
+
+.descripcion-producto{
+    width: 90%;
+    height: 100px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    margin: 0 0 10px
+}
+
+.subir-archivo{
+    width: 90%;
+    margin: 0 0 10px;
+
+}
+
+.area-interes{
+    width: 90%;
+    height: 100px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    margin: 0 0 10px
+}

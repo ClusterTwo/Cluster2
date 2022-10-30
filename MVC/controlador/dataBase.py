@@ -47,13 +47,15 @@ def creadorDeTablas():
     )
 
 #cargar usuario
-def creadorDeTablas():
+def cargaDeUsuario():
     conn= sql.connect("retrueque.db")
     cursor = conn.cursor()
     instanciaUsuario = f"INSERT INTO usuario VALUES ('{email}','{nombre}','{apellido}','{telefono}','{password}', {nivelUsuario} )"
     cursor.execute(instanciaUsuario)
     conn.commit()
     conn.close
+
+cargaDeUsuario()
 
 #consultas de usuarios
 

@@ -1,3 +1,6 @@
+
+
+
 CREATE DATABASE retrueque;
 
 use retrueque;
@@ -12,9 +15,7 @@ telefono varchar(15) NOT NULL,
 password varchar(20) NOT NULL,
 edad  date,
 fotoPerfil  varbinary(2mb),
-nivelUsario int NOT NULL
-
-);
+nivelUsario int NOT NULL)
 
 CREATE TABLE producto(
 
@@ -22,9 +23,7 @@ idProducto  int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
 descripcion varchar(150) NOT NULL,
 fotoProducto varbinary(2mb),
 categoria varchar(20) NOT NULL,
-interesDeIntercambio varchar(50)
-
-);
+interesDeIntercambio varchar(50))
 
 CREATE TABLE trade(
 
@@ -35,6 +34,4 @@ registro datetime,
 CONSTRAINT fk_idUsuario FOREIGN KEY (tradeidUsuario) 
 REFERENCES usuario (idUsuario),
 CONSTRAINT fk_idProducto FOREIGN KEY (tradeidProducto) 
-REFERENCES producto (idProducto),
-
-);
+REFERENCES producto (idProducto))

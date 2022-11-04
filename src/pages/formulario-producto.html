@@ -8,12 +8,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Outfit&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Outfit&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Assets -->
     <link rel="stylesheet" href="../css/formulario-producto.css">
-    <!-- Title  --> 
+    <!-- Title  -->
     <title>Formulario Productos | ReTrueque</title>
 </head>
 
@@ -35,24 +37,24 @@
             </div>
         </section>
 
-        <form class="formulario">
+        <form class="formulario" id="formulario">
             <h2>FORMULARIO DE PRODUCTO</h2>
 
             <div class="info">
                 <label for="names">TÍTULO</label>
-                <input type="text" placeholder="Ingrese nombre del artículo" id="names" required>
+                <input type="text" placeholder="Ingrese nombre del artículo" id="names">
 
                 <label for="descripcion">DESCRIPCIÓN</label>
-                <textarea id="descripcion" placeholder="Describí tu artículo" required ></textarea>
+                <textarea id="descripcion" placeholder="Describí tu artículo"></textarea>
 
-                <label for="Interés">PREFERENCIAS</label>
-                <textarea id="Interés" placeholder="Preferencias de trueque"></textarea>
- 
-                <input type="button" value="PUBLICAR" id="btnSend">
+                <label for="interes">PREFERENCIAS</label>
+                <textarea id="interes" placeholder="Preferencias de trueque"></textarea>
+
+                <input type="submit" value="PUBLICAR" id="btnSend">
             </div>
         </form>
     </div>
-
+    <script src="/src/js/ValidateForm-producto.js"></script>
 </body>
 
 </html>

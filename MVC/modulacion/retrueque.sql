@@ -1,6 +1,3 @@
-
-
-
 CREATE DATABASE retrueque;
 
 use retrueque;

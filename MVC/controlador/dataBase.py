@@ -1,5 +1,5 @@
-import mysql.connector
-import MVC.modulacion.reTrueque.sql
+import mysql.connector 
+
 
 connection=mysql.connector.connect(
     host='localhost',
@@ -29,17 +29,18 @@ try:
             """
         cursor = connection.cursor()
         result = cursor.execute(mySql_Create_Table_Query)
-        print("tabla productos creada con exito,,!! ")
+        print("tabla Usuario creada con exito,,!! ")
         cursor.close()
         connection.close()
 
 except mysql.connector.Error as error:
-    print("Failed to create table in MySQL: {}".format(error))
+    print("Fallo al crear la tabla in MySQL: {}".format(error))
 finally:
     if connection.is_connected():
         cursor.close()
         connection.close()
-        print("MySQL connection is closed")
+        print("Fin de conneccion con MySQL")
+        
 try:        
     def tablaProductos():
         connection=mysql.connector.connect(
@@ -57,17 +58,17 @@ try:
             """
         cursor = connection.cursor()
         result = cursor.execute(mySql_Create_Table_Query)
-        print("tabla productos creada con exito,,!! ")
+        print("tabla Producto creada con exito,,!! ")
         cursor.close()
         connection.close()
 
 except mysql.connector.Error as error:
-    print("Failed to create table in MySQL: {}".format(error))
+    print("Fallo al crear la tabla in MySQL: {}".format(error))
 finally:
     if connection.is_connected():
         cursor.close()
         connection.close()
-        print("MySQL connection is closed")
+        print("Fin de conneccion con MySQL")
 
 try:
     def tablaTrade():
@@ -89,21 +90,21 @@ try:
             """
         cursor = connection.cursor()
         result = cursor.execute(mySql_Create_Table_Query)
-        print("tabla productos creada con exito,,!! ")    
+        print("tabla Trade creada con exito,,!! ")    
         cursor.close()
         connection.close()
 
 except mysql.connector.Error as error:
-    print("Failed to create table in MySQL: {}".format(error))
+    print("Fallo al crear la tabla in MySQL: {}".format(error))
 finally:
     if connection.is_connected():
         cursor.close()
         connection.close()
-        print("MySQL connection is closed")        
+        print("Fin de conneccion con MySQL")        
 
 
 #cargar usuario
-def cargaDeUsuario():
+def cargaDeUsuario(idUsuario, email, nombre, apellido, telefono, password, nivelUsuario):
     connection=mysql.connector.connect(
     host='localhost',
     database='Retrueque.sql',

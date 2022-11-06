@@ -1,16 +1,15 @@
-from readline import insert_text
-import sqlite3 as sql
-from tkinter import _Cursor
+import mysql.connector
+from mysql.connector import Error
 
 #generar base de datos
 def creadorDeBase():
-    conn = sql.connect("retrueque.db")
+    conn = sql.connect("retrueque.sql")
     conn.commit()
     conn.close()
 
 #crear tablas
 def creadorDeTablas():
-    conn= sql.connect("retrueque.db")
+    conn= sql.connect("retrueque.sql")
     cursor = conn.cursor()
     cursor.execute(
         """ CREATE TABLE usuario(
@@ -45,17 +44,25 @@ def creadorDeTablas():
             REFERENCES producto (idProducto))
         """
     )
+    conn.commit()
+    conn.close()
 
 #cargar usuario
 def cargaDeUsuario():
-    conn= sql.connect("retrueque.db")
+    conn= sql.connect("retrueque.sql")
     cursor = conn.cursor()
     instanciaUsuario = f"INSERT INTO usuario VALUES ('{email}','{nombre}','{apellido}','{telefono}','{password}', {nivelUsuario} )"
     cursor.execute(instanciaUsuario)
     conn.commit()
     conn.close
 
-cargaDeUsuario()
+cargaDeUsuario(
+    email=input("Correo Electronico: "),
+    nombre=input("Nombre: "),
+    apellido=input("Apellido: "),
+    telefono=input("telefono: "),
+    nivelUsuario=0
+)
 
 #consultas de usuarios
 

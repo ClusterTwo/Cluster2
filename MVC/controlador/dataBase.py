@@ -1,20 +1,26 @@
+from sys import path
+path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\\site-packages')
 import mysql.connector 
+
 
 
 connection=mysql.connector.connect(
     host='localhost',
-    database='Retrueque.sql',
-    user='admin',
-    password='admin')
+    database='retrueque.sql',
+    user='root',
+    password='')
+cursor = connection.cursor()
+
+#crear tablas
 
 try:
-    #crear tablas
+    
     def tablaUsuiario():
         connection=mysql.connector.connect(
         host='localhost',
-        database='Retrueque.sql',
-        user='admin',
-        password='admin')
+        database='retrueque.sql',
+        user='root',
+        password='')
         mySql_Create_Table_Query = """ CREATE TABLE usuario(
 
                 idUsuario int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
@@ -45,9 +51,9 @@ try:
     def tablaProductos():
         connection=mysql.connector.connect(
         host='localhost',
-        database='Retrueque.sql',
-        user='admin',
-        password='admin')
+        database='retrueque.sql',
+        user='root',
+        password='')
         mySql_Create_Table_Query = """ CREATE TABLE producto(
 
                 idProducto  int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
@@ -74,9 +80,9 @@ try:
     def tablaTrade():
         connection=mysql.connector.connect(
         host='localhost',
-        database='Retrueque.sql',
-        user='admin',
-        password='admin')
+        database='retrueque.sql',
+        user='root',
+        password='')
         mySql_Create_Table_Query = """ CREATE TABLE trade(
 
                 idTransaccion int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
@@ -104,12 +110,18 @@ finally:
 
 
 #cargar usuario
-def cargaDeUsuario(idUsuario, email, nombre, apellido, telefono, password, nivelUsuario):
+def cargaDeUsuario(idUsuario, 
+                    email, 
+                    nombre, 
+                    apellido, 
+                    telefono, 
+                    password, 
+                    nivelUsuario):
     connection=mysql.connector.connect(
     host='localhost',
-    database='Retrueque.sql',
-    user='admin',
-    password='admin')
+    database='retrueque.sql',
+    user='root',
+    password='')
     cursor = connection.cursor()
     mySql_insert_query = """INSERT INTO productos (idUsuario, email, nombre, apellido, telefono, password, nivelUsuario) 
                                 VALUES (%s, %s, %s, %s) """

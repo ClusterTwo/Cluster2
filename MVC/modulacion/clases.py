@@ -25,8 +25,14 @@ class User:
         self.edad = edad
         
     
-    def cargaProducto(self,): #instancia un producto
-        pass
+    def cargaProducto(self,descripcion,fotoProducto,categoria,interesDeIntercambio): #instancia un producto
+        self.newProducto = producto (
+            descripcion=input('Ingrese una breve descripcion: '),
+            fotoProducto=input(),
+            categoria=input('Ingrese a que categoria pertenece: '),
+            interesDeIntercambio=input('Porque producto te interesa intercambiar: ')
+            )
+        
 
     def retiroProducto(self):
         pass
@@ -37,12 +43,15 @@ class User:
 class producto:
     idProducto = 0
     descripcion =""
-    fotoProducto = []
+    fotoProducto = image
     categoria = ""
     interesDeIntercambio = ""
 
-    def __init__(self, descripcion,
-    fotoproducto,categoria,interesDeIntercambio):
+    def __init__(self, 
+        descripcion,
+        fotoproducto,
+        categoria,
+        interesDeIntercambio):
         self.descripcion = descripcion
         self.fotoProducto = fotoproducto
         self.categoria = categoria

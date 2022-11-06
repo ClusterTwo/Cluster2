@@ -1,68 +1,123 @@
 import mysql.connector
-from mysql.connector import Error
+import MVC.modulacion.reTrueque.sql
 
-#generar base de datos
-def creadorDeBase():
-    conn = sql.connect("retrueque.sql")
-    conn.commit()
-    conn.close()
+connection=mysql.connector.connect(
+    host='localhost',
+    database='Retrueque.sql',
+    user='admin',
+    password='admin')
 
-#crear tablas
-def creadorDeTablas():
-    conn= sql.connect("retrueque.sql")
-    cursor = conn.cursor()
-    cursor.execute(
-        """ CREATE TABLE usuario(
+try:
+    #crear tablas
+    def tablaUsuiario():
+        connection=mysql.connector.connect(
+        host='localhost',
+        database='Retrueque.sql',
+        user='admin',
+        password='admin')
+        mySql_Create_Table_Query = """ CREATE TABLE usuario(
 
-            idUsuario int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
-            email varchar (50) NOT NULL,
-            nombre varchar (100) NOT NULL,
-            apellido varchar(50) NOT NULL,
-            telefono varchar(15) NOT NULL,
-            password varchar(20) NOT NULL,
-            edad  date,
-            fotoPerfil  varbinary(2mb),
-            nivelUsario int NOT NULL)
-        """
-        """ CREATE TABLE producto(
+                idUsuario int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
+                email varchar (50) NOT NULL,
+                nombre varchar (100) NOT NULL,
+                apellido varchar(50) NOT NULL,
+                telefono varchar(15) NOT NULL,
+                password varchar(20) NOT NULL,
+                edad  date,
+                fotoPerfil  varbinary(2mb),
+                nivelUsario int NOT NULL)
+            """
+        cursor = connection.cursor()
+        result = cursor.execute(mySql_Create_Table_Query)
+        print("tabla productos creada con exito,,!! ")
+        cursor.close()
+        connection.close()
 
-            idProducto  int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
-            descripcion varchar(150) NOT NULL,
-            fotoProducto varbinary(2mb),
-            categoria varchar(20) NOT NULL,
-            interesDeIntercambio varchar(50))
-        """
-        """ CREATE TABLE trade(
+except mysql.connector.Error as error:
+    print("Failed to create table in MySQL: {}".format(error))
+finally:
+    if connection.is_connected():
+        cursor.close()
+        connection.close()
+        print("MySQL connection is closed")
+try:        
+    def tablaProductos():
+        connection=mysql.connector.connect(
+        host='localhost',
+        database='Retrueque.sql',
+        user='admin',
+        password='admin')
+        mySql_Create_Table_Query = """ CREATE TABLE producto(
 
-            idTransaccion int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
-            tradeidUsuario int,
-            tradeidProducto int,
-            registro datetime, 
-            CONSTRAINT fk_idUsuario FOREIGN KEY (tradeidUsuario) 
-            REFERENCES usuario (idUsuario),
-            CONSTRAINT fk_idProducto FOREIGN KEY (tradeidProducto) 
-            REFERENCES producto (idProducto))
-        """
-    )
-    conn.commit()
-    conn.close()
+                idProducto  int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
+                descripcion varchar(150) NOT NULL,
+                fotoProducto varbinary(2mb),
+                categoria varchar(20) NOT NULL,
+                interesDeIntercambio varchar(50))
+            """
+        cursor = connection.cursor()
+        result = cursor.execute(mySql_Create_Table_Query)
+        print("tabla productos creada con exito,,!! ")
+        cursor.close()
+        connection.close()
+
+except mysql.connector.Error as error:
+    print("Failed to create table in MySQL: {}".format(error))
+finally:
+    if connection.is_connected():
+        cursor.close()
+        connection.close()
+        print("MySQL connection is closed")
+
+try:
+    def tablaTrade():
+        connection=mysql.connector.connect(
+        host='localhost',
+        database='Retrueque.sql',
+        user='admin',
+        password='admin')
+        mySql_Create_Table_Query = """ CREATE TABLE trade(
+
+                idTransaccion int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
+                tradeidUsuario int,
+                tradeidProducto int,
+                registro datetime, 
+                CONSTRAINT fk_idUsuario FOREIGN KEY (tradeidUsuario) 
+                REFERENCES usuario (idUsuario),
+                CONSTRAINT fk_idProducto FOREIGN KEY (tradeidProducto) 
+                REFERENCES producto (idProducto))
+            """
+        cursor = connection.cursor()
+        result = cursor.execute(mySql_Create_Table_Query)
+        print("tabla productos creada con exito,,!! ")    
+        cursor.close()
+        connection.close()
+
+except mysql.connector.Error as error:
+    print("Failed to create table in MySQL: {}".format(error))
+finally:
+    if connection.is_connected():
+        cursor.close()
+        connection.close()
+        print("MySQL connection is closed")        
+
 
 #cargar usuario
 def cargaDeUsuario():
-    conn= sql.connect("retrueque.sql")
-    cursor = conn.cursor()
-    instanciaUsuario = f"INSERT INTO usuario VALUES ('{email}','{nombre}','{apellido}','{telefono}','{password}', {nivelUsuario} )"
-    cursor.execute(instanciaUsuario)
-    conn.commit()
-    conn.close
-
-cargaDeUsuario(
-    email=input("Correo Electronico: "),
-    nombre=input("Nombre: "),
-    apellido=input("Apellido: "),
-    telefono=input("telefono: "),
-    nivelUsuario=0
-)
+    connection=mysql.connector.connect(
+    host='localhost',
+    database='Retrueque.sql',
+    user='admin',
+    password='admin')
+    cursor = connection.cursor()
+    mySql_insert_query = """INSERT INTO productos (idUsuario, email, nombre, apellido, telefono, password, nivelUsuario) 
+                                VALUES (%s, %s, %s, %s) """
+    record = (idUsuario, email, nombre, apellido, telefono, password, nivelUsuario)
+    cursor.execute(mySql_insert_query, record)
+    connection.commit()
+    cursor.close()
+    connection.close()
+    
 
 #consultas de usuarios
 

@@ -1,5 +1,5 @@
 //Captura de datos
-var form = document.getElementById("formulario"),
+let form = document.getElementById("formulario"),
   elementos = form.elements,
   boton = document.getElementById("btnSend");
 
@@ -29,7 +29,7 @@ validarInteres = function (e) {
 
 //Funcion validadora
 
-var validar = function (e) {
+let validar = function (e) {
   validarTitulo(e);
   validarDescripcion(e);
   validarInteres(e);

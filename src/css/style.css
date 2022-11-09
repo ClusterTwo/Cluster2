@@ -29,7 +29,7 @@ a{
 /* SECCION HEADER -  MENÚ Y PRESENTACION DE MARCA */
 .header {
     background: #929d79;
-    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.600), hsla(78, 16%, 55%, 0.600)), url(img/presentacion2.jpg);
+    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.600), hsla(78, 16%, 55%, 0.600)), url(src\media\presentacion2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -213,7 +213,7 @@ h1{
 /* SECCION FOOTER - Seccion Final */
 .footer{
     background: #929d79;
-    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.600), hsla(78, 16%, 55%, 0.600)), url(img/presentacion2.jpg);
+    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.600), hsla(78, 16%, 55%, 0.600)), url(src\media\presentacion2.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;

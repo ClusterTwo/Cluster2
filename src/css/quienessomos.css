@@ -1,53 +1,73 @@
-/* header */
-.titulos h1{
-    padding: 20px;
-    text-align: center;
-    font-size: 29em;    
+/* header títulos */
+.definicion-retrueque h1, h2{
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: 300; 
+    text-align: right;
 }
-.titulos h3{
+
+/*.grid-quienes-somos h2{
+    text-align: left;
     padding: 16px;
-    text-align: center; 
-    align-self: flex-start;  
+    text-align: left; 
+    font-weight: 400;
+    align-self: flex-start;
+}*/
+
+.grid-quienes-somos h3{
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: 100; 
+    text-align: left;
+    padding: 16px;
+    align-self: flex-start;
 }
 
-
+/* header títulos */
 .grid-quienes-somos {
-    width: 95%;
+    background-color: #c6bfa6;;
+
+    /*width: 95%;
     max-width: 1000px;
     margin: 1.6em auto;
+    grid-template-columns: repeat(3, 1fr);*/
 
-    display: grid;
     gap: 1.6em;
-
-   grid-template-columns: repeat(3, 1fr);
+    display: grid;
 }
 
 .grid-quienes-somos > .primera-linea,
 .grid-quienes-somos > .vision-mision-valor,
 .grid-quienes-somos > .definicion-retrueque,
 .grid-quienes-somos > div {
-    background: rgb(77, 5, 245);
     padding: 20px;
-    border: 1px solid black;
-    color:white;
+    color: #fff; 
 }
 
-.grid-quienes-somos > .primera-linea,
+.grid-quienes-somos > .primera-linea{
+    margin-top: auto;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    text-align: justify;
+}
 .grid-quienes-somos > .definicion-retrueque{
-    grid-column: 1/4;
-    background: rgb(95, 5, 238);
-    color: black;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    text-align: justify;
 }
 
 .grid-quienes-somos > .vision-mision-valor{
-    grid-column: span 3;
+    /*grid-column: span 3;*/ 
+    grid-column: 1/2;
+    grid-row: 1/4;
 }
 
+/* contenedor */
 .vision-mision-valor > .articulos{
-    background: coral;
+    background-color: #929d792d;
     padding: 20px;
     margin-top: 5px;
-    color: #dfdfdf;
+    font-weight: 100;   
 }
-
-

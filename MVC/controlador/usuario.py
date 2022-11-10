@@ -32,7 +32,7 @@ def cambioDeContraseña(password,idUsuario):
         user='admin',
         password='admin')
 
-        mySql_insert_query = f" UPDATE email SET password ='{password}' WHERE idUsuario={idUsuario};"
+        mySql_insert_query = f" UPDATE password SET password ='{password}' WHERE idUsuario={idUsuario};"
         
         cursor = connection.cursor()
         cursor.execute(mySql_insert_query)

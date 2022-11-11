@@ -39,7 +39,7 @@ body {
     justify-content: center;
 
     background: #929d79;
-    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.603), hsla(78, 16%, 55%, 0.603)), url(../formularios/img/presentacion2.jpg);
+    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.603), hsla(78, 16%, 55%, 0.603)), url(../media/presentacion2.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -125,7 +125,7 @@ body {
     max-height: 90px;
 }
 
-.formulario .info input[type="button"]{
+.formulario .info input[type="submit"]{
     width: 180px;
     background: hsla(47, 22%, 71%, 0.808);
     padding: 10px;

@@ -134,7 +134,7 @@ body {
     font-weight: 20;
 }
 
-.formulario .info input[type="button"]{
+.formulario .info input[type="submit"]{
     width: 180px;
     background: #929D79;
     padding: 10px;

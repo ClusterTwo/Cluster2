@@ -15,7 +15,7 @@ cursor = connection.cursor()
 
 try:
     
-    def tablaUsuiario():
+    def tablaUsuario():
         connection=mysql.connector.connect(
         host='localhost',
         database='retrueque',
@@ -30,7 +30,7 @@ try:
                 telefono varchar(15) NOT NULL,
                 password varchar(20) NOT NULL,
                 edad date,
-                nivelUsario int)
+                nivelUsuario int)
             """
         cursor = connection.cursor()
         result = cursor.execute(crearTablaUsuario)

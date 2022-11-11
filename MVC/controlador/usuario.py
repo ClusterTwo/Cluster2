@@ -3,22 +3,22 @@ path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\
 import mysql.connector 
 
 #cargar usuario
-def cargaDeUsuario(idUsuario, 
-                    email, 
-                    nombre, 
-                    apellido, 
-                    telefono, 
-                    password, 
-                    nivelUsuario):
+def cargaDeUsuario(
+        email, 
+        nombre, 
+        apellido, 
+        telefono, 
+        password, 
+        nivelUsuario):
     connection=mysql.connector.connect(
     host='localhost',
     database='retrueque',
     user='root',
     password='')
     cursor = connection.cursor()
-    insertDato = """INSERT INTO productos (idUsuario, email, nombre, apellido, telefono, password, nivelUsuario) 
-                                VALUES (%s, %s, %s, %s, %s, %s, %s) """
-    record = (idUsuario, email, nombre, apellido, telefono, password, nivelUsuario)
+    insertDato = """INSERT INTO Usuario ( email, nombre, apellido, telefono, password, nivelUsuario) 
+                                VALUES ( %s, %s, %s, %s, %s, %s) """
+    record = ( email, nombre, apellido, telefono, password,nivelUsuario)
     cursor.execute(insertDato, record)
     connection.commit()
     cursor.close()
@@ -30,7 +30,7 @@ def cambioDeEmail(email,idUsuario):
     try:
         connection = mysql.connector.connect(
             host='localhost',
-            database='retrueque.sql',
+            database='retrueque',
             user='root',
             password='')
 
@@ -53,7 +53,7 @@ def cambioDeContraseña(password,idUsuario):
     try:
         connection = mysql.connector.connect(
             host='localhost',
-            database='retrueque.sql',
+            database='retrueque',
             user='root',
             password='')
 

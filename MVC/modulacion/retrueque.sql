@@ -3,18 +3,22 @@ CREATE DATABASE retrueque;
 use retrueque;
 
 CREATE TABLE usuario(
-
 idUsuario int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
 email varchar (50) NOT NULL,
+password varchar(20) NOT NULL,
+nivelUsario int,
 nombre varchar (100) NOT NULL,
 apellido varchar(50) NOT NULL,
 telefono varchar(15) NOT NULL,
-password varchar(20) NOT NULL,
 edad  date,
 fotoPerfil  varbinary(2mb),
-nivelUsario int NOT NULL)
+)
 
-CREATE TABLE producto(
+CREATE TABLE nivel (
+nivelesUsuario int PRIMARY KEY NOT NULL
+)
+
+CREATE TABLE productos(
 
 idProducto  int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
 descripcion varchar(150) NOT NULL,

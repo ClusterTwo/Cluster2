@@ -1,12 +1,12 @@
 from sys import path
-path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\\site-packages')
+path.append('C:\\Users\\pablo\\Documents\\Ispc\\ClusterTwo\\Cluster2\\MVC\\modulacion')
+path.append('C:\\Users\\pablo\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages')
 import mysql.connector 
 
 
-
-connection=mysql.connector.connect(
+connection = mysql.connector.connect (
     host='localhost',
-    database='retrueque.sql',
+    database='retrueque',
     user='root',
     password='')
 cursor = connection.cursor()
@@ -18,23 +18,22 @@ try:
     def tablaUsuiario():
         connection=mysql.connector.connect(
         host='localhost',
-        database='retrueque.sql',
+        database='retrueque',
         user='root',
         password='')
-        mySql_Create_Table_Query = """ CREATE TABLE usuario(
+        crearTablaUsuario = """ CREATE TABLE usuario(
 
-                idUsuario int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
-                email varchar (50) NOT NULL,
-                nombre varchar (100) NOT NULL,
+                idUsuario int PRIMARY KEY AUTO_INCREMENT,
+                email varchar(50) NOT NULL,
+                nombre varchar(100) NOT NULL,
                 apellido varchar(50) NOT NULL,
                 telefono varchar(15) NOT NULL,
                 password varchar(20) NOT NULL,
-                edad  date,
-                fotoPerfil  varbinary(2mb),
-                nivelUsario int NOT NULL)
+                edad date,
+                nivelUsario int)
             """
         cursor = connection.cursor()
-        result = cursor.execute(mySql_Create_Table_Query)
+        result = cursor.execute(crearTablaUsuario)
         print("tabla Usuario creada con exito,,!! ")
         cursor.close()
         connection.close()
@@ -46,24 +45,23 @@ finally:
         cursor.close()
         connection.close()
         print("Fin de conneccion con MySQL")
-        
+
 try:        
     def tablaProductos():
         connection=mysql.connector.connect(
         host='localhost',
-        database='retrueque.sql',
+        database='retrueque',
         user='root',
         password='')
-        mySql_Create_Table_Query = """ CREATE TABLE producto(
+        crearTablaProducto = """ CREATE TABLE productos(
 
-                idProducto  int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
+                idProducto  int PRIMARY KEY NOT NULL AUTO_INCREMENT,
                 descripcion varchar(150) NOT NULL,
-                fotoProducto varbinary(2mb),
                 categoria varchar(20) NOT NULL,
                 interesDeIntercambio varchar(50))
             """
         cursor = connection.cursor()
-        result = cursor.execute(mySql_Create_Table_Query)
+        result = cursor.execute(crearTablaProducto)
         print("tabla Producto creada con exito,,!! ")
         cursor.close()
         connection.close()
@@ -76,26 +74,27 @@ finally:
         connection.close()
         print("Fin de conneccion con MySQL")
 
+
 try:
     def tablaTrade():
         connection=mysql.connector.connect(
         host='localhost',
-        database='retrueque.sql',
+        database='retrueque',
         user='root',
         password='')
-        mySql_Create_Table_Query = """ CREATE TABLE trade(
+        crearTablaTrade = """ CREATE TABLE trade(
 
-                idTransaccion int PRIMARY KEY NOT NULL AUTOINCREMENTAL,
+                idTransaccion int PRIMARY KEY NOT NULL AUTO_INCREMENT,
                 tradeidUsuario int,
                 tradeidProducto int,
                 registro datetime, 
                 CONSTRAINT fk_idUsuario FOREIGN KEY (tradeidUsuario) 
                 REFERENCES usuario (idUsuario),
                 CONSTRAINT fk_idProducto FOREIGN KEY (tradeidProducto) 
-                REFERENCES producto (idProducto))
+                REFERENCES productos (idProducto))
             """
         cursor = connection.cursor()
-        result = cursor.execute(mySql_Create_Table_Query)
+        result = cursor.execute(crearTablaTrade)
         print("tabla Trade creada con exito,,!! ")    
         cursor.close()
         connection.close()
@@ -109,28 +108,7 @@ finally:
         print("Fin de conneccion con MySQL")        
 
 
-#cargar usuario
-def cargaDeUsuario(idUsuario, 
-                    email, 
-                    nombre, 
-                    apellido, 
-                    telefono, 
-                    password, 
-                    nivelUsuario):
-    connection=mysql.connector.connect(
-    host='localhost',
-    database='retrueque.sql',
-    user='root',
-    password='')
-    cursor = connection.cursor()
-    mySql_insert_query = """INSERT INTO productos (idUsuario, email, nombre, apellido, telefono, password, nivelUsuario) 
-                                VALUES (%s, %s, %s, %s) """
-    record = (idUsuario, email, nombre, apellido, telefono, password, nivelUsuario)
-    cursor.execute(mySql_insert_query, record)
-    connection.commit()
-    cursor.close()
-    connection.close()
-    
+
 
 #consultas de usuarios
 

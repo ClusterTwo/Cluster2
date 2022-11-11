@@ -2,7 +2,7 @@ from email.mime import image
 from errno import EADDRNOTAVAIL
 
 
-class User:
+class User():
     idUsuario = ""
     email = ""
     password = ""
@@ -10,7 +10,7 @@ class User:
     apellido = ""
     telefono = 0
     edad = 0
-    fotoPerfil = image
+    #fotoPerfil = image
     nivelUsuario = ""
 
 
@@ -25,13 +25,9 @@ class User:
         self.edad = edad
         
     
-    def cargaProducto(self,descripcion,fotoProducto,categoria,interesDeIntercambio): #instancia un producto
-        self.newProducto = producto (
-            descripcion=input('Ingrese una breve descripcion: '),
-            fotoProducto=input(),
-            categoria=input('Ingrese a que categoria pertenece: '),
-            interesDeIntercambio=input('Porque producto te interesa intercambiar: ')
-            )
+    def cargaProducto(): #instancia un producto
+        newProducto = producto()
+        return "se cargo el nuevo producto"
         
 
     def retiroProducto(self):
@@ -40,10 +36,10 @@ class User:
     def confirmarTrade(self):
         pass
 
-class producto:
-    idProducto = 0
-    descripcion =""
-    fotoProducto = image
+class producto():
+    idProducto =1
+    descripcion = ""
+    fotoProducto = "una imagen" #image
     categoria = ""
     interesDeIntercambio = ""
 
@@ -59,3 +55,11 @@ class producto:
     
     def correccionDatos(self):
         pass
+
+
+nuevoUsuario= User
+nuevoUsuario.cargaProducto(            
+    descripcion=input('Ingrese una breve descripcion: '),
+    categoria=input('Ingrese a que categoria pertenece: '),
+    interesDeIntercambio=input('Porque producto te interesa intercambiar: ')
+    )    

@@ -8,26 +8,47 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Outfit&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Outfit&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Assets -->
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/formulario-producto.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Title  -->
     <title>Formulario Productos | ReTrueque</title>
 </head>
 
 <body>
-    <!-- Container Formulario -->
+
+    <header class="header"><!-- Menu Header -->
+        <div class="header-menu margen-interno" data-aos="fade-up" data-aos-duration="2000">
+            <div class="header-menu-logo">
+                <a href="../../index.html">
+                <img class="menu-logo-img" src="../media/logo-copy.png" alt="">
+                </a>
+            </div>
+            <div class="header-menu-navbar">
+                <a href="../../index.html"><i class="fa-solid fa-house"></i>HOME</a>
+                <a href="../src/pages/quienessomos.html"><i class="fa-solid fa-users"></i>QUIENES SOMOS</a>
+                <a href="../index.html#seccion-productos"><i class="fa-solid fa-bolt"></i>PRODUCTOS</a>
+                <a href="../pages/formulario-contacto.html"><i class="fa-solid fa-paper-plane"></i>CONTACTO</a>
+            </div>
+            <div class="header-menu-usuario">
+                <a href="../loginForm.html"><img src="../media/stroke.svg" class="usuario-login" alt="user-icon" id="user" title="Iniciar Sesión"></a> 
+                <!-- <button class="btn-usuario" href="" title="Iniciar Sesion"><i class="fa-solid fa-right-to-bracket"></i></button>
+                     <button class="btn-usuario" href="" title="Registrate"><i class="fa-solid fa-user-plus"></i></button> -->
+            </div>
+        </div>  
+    </header>
+
+<!-- Container Formulario -->
     <div class="contenido-prod">
-
-        <section class="producto" style="margin-left: 3em;">
-            <h1>SUBÍ TUS FOTOS</h1>
-
+        <section class="producto" >
+            <h2>SUBÍ TUS FOTOS</h2>
             <div class="img-container">
-                <img src="" alt="...">
+                <img src="../media/img-container.png" alt="..." class="img">
             </div>
             <div id="preview"></div>
 
@@ -54,7 +75,39 @@
             </div>
         </form>
     </div>
-    <script src="/src/js/ValidateForm-producto.js"></script>
-</body>
 
+<!-- Seccion Footer  -->
+    <footer class="footer margen-interno" data-aos="fade-up" data-aos-duration="1000">
+        
+        <div class="footer-logo" data-aos="fade-up" data-aos-duration="3000">
+             <h4>ReTRUEQUE</h4>
+        </div>
+
+        <div class="footer-enlaces" data-aos="fade-up" data-aos-duration="3000">
+            <h5>ENLACES</h5>
+             <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../src/pages/quienessomos.html">Quienes Somos</a></li>
+            <li><a href="../index.html#seccion-productos">Productos</a></li>
+            <li><a href="../pages/formulario-contacto.html"></i>Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-contacto" data-aos="fade-up" data-aos-duration="3000">
+            <h5>CONTACTO</h5>
+            <ul>
+            <li><a href=""><i class="fa-solid fa-location-dot"></i>Córdoba, Argentina</a></li>
+            <li><a href=""><i class="fa-solid fa-mobile"></i>(+54) 9 3513 0741 446</a></li>
+            <!--<li><a href=""><i class="fa-solid fa-envelope"></i>retrueque@gmail.com</a></li>-->
+            <li><a href="https://github.com/ClusterTwo/Cluster2"><i class="fa-brands fa-github"></i>Github</a></li>
+            <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+
+<!-- Seccion Script -->
+    <script src="../js/ValidateForm-producto.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
 </html>

@@ -17,8 +17,8 @@ body {
 
 /* caja de contenido */
 .contenido {
-    width: 1050px;
-    height: 530;
+    width: 75%;
+    height: 60%;
     margin: 50px auto;
     display: flex;
 
@@ -39,33 +39,19 @@ body {
     justify-content: center;
 
     background: #929d79;
-    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.603), hsla(78, 16%, 55%, 0.603)), url(../media/presentacion2.jpg);
+    background-image: linear-gradient(rgba(148, 159, 122, 0.600),rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.info_ h1{
+h1{
     margin-bottom: 60px;
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 2.5vw;
+    font-weight: 100;
     text-align: center;
     color: #fff;
 }
-.info_ .items p:nth-child(1) span{
-    font-size: 30px;
-    margin-right: 10px;
-}
-.info_ .items p:nth-child(2) span{
-    font-size: 50px;
-    margin-right: 10px;
-    margin-left: 4px;
-}
-.info_ .items p:nth-child(3) span{
-    font-size: 50px;
-    margin-right: 10px;
-    margin-left: 4px;
-}
-.info_ .items p{
+.items p{
     display: flex;
     text-align: center;
     font-size: 16px;
@@ -79,32 +65,51 @@ body {
     color: #fff;
 }
 
+.info_ .items p:nth-child(1) span{
+    font-size: 2vw;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.info_ .items p:nth-child(2) span{
+    font-size: 2vw;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-left: 4px;
+}
+.info_ .items p:nth-child(3) span{
+    font-size: 2vw;
+    margin-right: 10px;
+    margin-left: 4px;
+}
+
+
 /* form de mensaje */
 .formulario {
     width: 62%;
     padding: 30px 40px;
 }
-.formulario h2{
-    margin-bottom: 60px;
-    font-size: 30px;
-    font-weight: 400;
-    text-align: left;
-    color: #fff;
-}
 
-.formulario .info{
+.info{
     display: flex;
     flex-direction: column;
     color: transparent;
 }
 
-.formulario .info label{
+h2{
+    margin-bottom: 60px;
+    font-size: 2.5vw;
+    font-weight: 100;
+    text-align: left;
+    color: #fff;
+}
+
+label{
     color: #fff;
     font-weight: 20;
 }
 
-.formulario .info input,
-.formulario .info textarea{
+input,
+textarea{
     width: 100%;
     padding: 8px 0 5px;
     margin-bottom: 20px;
@@ -119,13 +124,13 @@ body {
     font-weight: 20;
 }
 
-.formulario .info textarea{
+textarea{
     max-width: 100%;
     min-width: 100%;
     max-height: 90px;
 }
 
-.formulario .info input[type="submit"]{
+input[type="submit"]{
     width: 180px;
     background: hsla(47, 22%, 71%, 0.808);
     padding: 10px;
@@ -136,4 +141,27 @@ body {
     font-family: "montserrat";
     font-weight: 20;
     cursor: pointer;
+}
+
+@media all and (max-width:720px) {
+    .contenido{
+        flex-direction: column
+    }   
+    .info_, .formulario{
+        width: 100%;
+    }
+    h1,h2{
+        margin-top: 9vw;
+        margin-bottom: 9vw;
+        text-align: center;
+        font-size: 5vw;
+    }
+    textarea{
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 90px;
+    }
+    input[type="submit"]{
+        font-size: 5vw;
+    }
 }

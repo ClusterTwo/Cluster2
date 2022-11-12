@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/quienessomos.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <!-- Title  -->
     <title>Quienes Somos | ReTrueque</title>
 </head>
@@ -33,33 +35,59 @@
 
         <!-- Menu Header -->
         <header class="header">
-            <div class="header-menu margen-interno" data-aos="fade-up" data-aos-duration="2000">
-                <div class="header-menu-logo">
-                    <a href="index.html">
-                        <img class="menu-logo-img" src="../media/logo-copy.png" alt="">
-                    </a>
+          <nav class="navbar navbar-expand-md header-menu margen-interno">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">
+                  <img class="menu-logo-img" src="../media/logo-copy.png" alt="">
+                </a>
+
+                <div class="collapse navbar-collapse  header-menu-navbar"      id="navbarToggleExternalContent ">
+                    <ul class="navbar-nav">
+                      <li class="nav-item ">
+                        <a class="nav-link" aria-current="page" href="/index.html">
+                          <i class="fa-solid fa-house"></i>HOME
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="quienessomos.html">
+                          <i class="fa-solid fa-users"></i>QUIENES SOMOS
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/index.html#seccion-productos">
+                          <i class="fa-solid fa-bolt"></i>PRODUCTOS
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="formulario-contacto.html"><i class="fa-solid fa-paper-plane"></i>CONTACTO
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="">
+                          <i class="fa-solid fa-gear"></i>SOPORTE
+                        </a>
+                      </li>
+                    </ul>
                 </div>
-                <div class="header-menu-navbar">
-                  <a href="../../index.html"><i class="fa-solid fa-house"></i>HOME</a>
-                  <a href="quienessomos.html"><i class="fa-solid fa-users"></i>QUIENES SOMOS</a>
-                  <a href="../../index.html#seccion-productos.html"><i class="fa-solid fa-bolt"></i>PRODUCTOS</a>
-                  <a href="../pages/formulario-contacto.html"><i class="fa-solid fa-paper-plane"></i>CONTACTO</a>
-                  <a href=""><i class="fa-solid fa-gear"></i>SOPORTE</a>
-                </div>
+
                 <div class="header-menu-usuario">
-                  <a href="./loginForm.html"><img src="/src/media/stroke.svg" class="usuario-login" alt="user-icon" id="user" title="Iniciar Sesión"></a>
-                  <a href="./loginForm.html"><img src="/src/media/share-2.svg" class="usuario-signup" alt="user-icon" id="user" title="Registrarse"></a>
-                    <!-- <button class="btn-usuario" href="" title="Iniciar Sesion"><i class="fa-solid fa-right-to-bracket"></i></button>
-                    <button class="btn-usuario" href="" title="Registrate"><i class="fa-solid fa-user-plus"></i></button> -->
+                  <a href="loginForm.html">
+                    <img src="../media/stroke.svg" class="usuario-login" alt="user-icon" id="user" title="Iniciar Sesión">
+                  </a>
+                  <!-- <a href="./src/pages/loginForm.html">
+                    <img src="src/media/share-2.svg" class="usuario-signup" alt="user-icon" id="user" title="Registrarse">
+                  </a> -->
                 </div>
 
             </div>
-
-            <!-- titulos -->
-            <div class="header-presentation">
-              <h1>RETRUEQUE</h1>
-            </div>
-
+          </nav>
+          
+          <div class="header-presentation">
+                <h1>RETRUEQUE</h1>     
+          </div>
         </header>
 
         <div class="grid-quienes-somos">
@@ -128,10 +156,10 @@
             <div class="footer-enlaces" data-aos="fade-up" data-aos-duration="3000">
               <h5>ENLACES</h5>
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./src/pages/quienessomos.html">Quienes Somos</a></li>
-                <li><a href="index.html#seccion-productos">Productos</a></li>
-                <li><a href="./src/pages/formulario-contacto.html"></i>Contacto</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="quienessomos.html">Quienes Somos</a></li>
+                <li><a href="/index.html#seccion-productos">Productos</a></li>
+                <li><a href="formulario-contacto.html"></i>Contacto</a></li>
                 <li><a href=""></i>Soporte</a></li>
               </ul>
 

@@ -2,6 +2,7 @@
 .contenedor article {
 	justify-content: right;
 	display: flex;
+	height: 600px;
 }
 
 .contenedor article .btn-abrir-popup {

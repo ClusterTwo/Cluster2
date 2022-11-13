@@ -9,26 +9,29 @@ from errno import EADDRNOTAVAIL
 
 
 class User():
-    idUsuario = ""
+    idUsuario = 0
     email = ""
     password = ""
     nombre = ""
     apellido = ""
-    telefono = 0
-    #edad = 0
-    #fotoPerfil = image
+    telefono = ""
+    edad = 0
+    fotoPerfil = "imagen"
     nivelUsuario = 0
+    localidad = ""
 
 
     def __init__(self, email, password, 
-        nombre, apellido, telefono, nivelUsuario):
+        nombre, apellido,fotoPerfil, telefono, nivelUsuario, localidad):
 
         self.email = email
         self.password = password
         self.nombre = nombre
         self.apellido = apellido
         self.telefono = telefono
-        nivelUsuario = nivelUsuario
+        self.fotoPerfil = fotoPerfil
+        self.nivelUsuario = nivelUsuario
+        self.localidad = localidad
 
         connection=mysql.connector.connect(
         host='localhost',
@@ -36,16 +39,16 @@ class User():
         user='root',
         password='')
         cursor = connection.cursor()
-        insertDato = """INSERT INTO Usuario ( email, nombre, apellido, telefono, password, nivelUsuario) 
-                                    VALUES ( %s, %s, %s, %s, %s, %s) """
-        record = ( email, nombre, apellido, telefono, password,nivelUsuario)
+        insertDato = """INSERT INTO Usuario ( email, nombre, apellido, fotoPerfil, telefono, password, nivelUsuario, localidad) 
+                                    VALUES ( %s, %s, %s,%s, %s, %s, %s, %s) """
+        record = ( email, nombre, apellido, fotoPerfil, telefono, password,nivelUsuario,localidad)
         cursor.execute(insertDato, record)
         connection.commit()
         cursor.close()
         connection.close()
 
-    def cargaDeProducto(self,descripcion, categoria, interesDeIntercambio):
-        self.nuevoProducto = producto(descripcion, categoria, interesDeIntercambio)
+    def cargaDeProducto(self,descripcion, categoria, interesDeIntercambio, fotoProducto,idUsuario,estadoProducto):
+        self.nuevoProducto = producto(descripcion, categoria, interesDeIntercambio, fotoProducto,idUsuario,estadoProducto)
         return "producto cargado con exito"
     
 
@@ -56,21 +59,26 @@ class User():
         pass
 
 class producto():
-    idProducto =1
+    idProducto = 0
     descripcion = ""
-    #fotoProducto = "una imagen" #image
+    fotoProducto = "una imagen" #image
     categoria = ""
     interesDeIntercambio = ""
+    estadoProducto = ""
 
     def __init__(self, 
         descripcion,
-        #fotoproducto,
+        fotoProducto,
         categoria,
-        interesDeIntercambio):
+        interesDeIntercambio,
+        usuarioProducto,
+        estadoProducto):
         self.descripcion = descripcion
-        #self.fotoProducto = fotoproducto
+        self.fotoProducto = fotoProducto
         self.categoria = categoria
         self.interesDeIntercambio = interesDeIntercambio
+        self.usuarioProducto = usuarioProducto
+        self.estadoProducto = estadoProducto
         connection=mysql.connector.connect(
         host='localhost',
         database='retrueque',
@@ -78,16 +86,27 @@ class producto():
         password='')
 
         cursor = connection.cursor()
-        insertDato = """INSERT INTO productos ( descripcion, categoria, interesDeIntercambio) 
-                                    VALUES ( %s, %s, %s) """
-        record = (  descripcion, categoria, interesDeIntercambio)
-        cursor.execute(insertDato, record)
+        insertDato = f"INSERT INTO productos ( descripcion, categoria, interesDeIntercambio, fotoProducto, usuarioProducto) VALUES ( {descripcion}, {categoria}, {interesDeIntercambio},{fotoProducto},{usuarioProducto},{estadoProducto}) "
+        cursor.execute(insertDato)
         connection.commit()
         cursor.close()
         connection.close()
     
-    def correccionDatos(self):
-        pass
+    def estadoProducto(self,idProducto,idUsuario):
+        connection = mysql.connector.connect(host='localhost',
+                                     database='retrueque',
+                                     user='root',
+                                     password='')
+        consulta = f"SELECT estadoProducto FROM productos WHERE usuarioProducto = {idUsuario} AND idProducto = {idProducto}"
+        cursor = connection.cursor()
+        cursor.execute(consulta)
+        fila=cursor.fetchall()
+        print(fila)
+        cursor.close()
+        connection.close()
+            
+        def correccionDatos(self):
+            pass
 
 
  

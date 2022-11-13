@@ -20,11 +20,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Assets -->
-    <link rel="stylesheet" href="/src/css/normalize.css">
-    <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="stylesheet" href="/src/css/formulario-contacto.css">
+    <link rel="stylesheet" href="../css/controlpanel.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-loginForm.css">
+	
     <!-- Title  -->
     <title>ReTrueque | Home </title>
 </head>
@@ -85,47 +88,118 @@
             </div>
           </nav>
     
-          <div class="header-presentation">
-            <h1>RETRUEQUE</h1>
-          </div>
+          <h1 align="center">Panel de Control</h1>
+
         </header>
 
 
-        <!-- Container formulario -->
+        <br>
 
-        <div class="contenido">
+        <div class="row">
 
-            <section class="info_">
-                <h1>INFORMACIÓN<br>DE CONTACTO</h1>
+          <div class="column left" style="background-color:#aaa;">
+            <img src="../media/user.png" alt="usuario" width="100" height="100" aling="center">
+            <br>
+            <br>
+            <button>Cambiar Imagen Perfil</button>
+            <br>
+            <button>Cambiar Password</button>
+            <br>
+            <button>Agregar Retrueque</button>
 
-                <section class="items">
-                    <p><span class="fa fa-location-dot"></span> Córdoba, Argentina </p>
-                    <p><span class="fa fa-mobile"></span> (+54) 9 3513 0741 446 </p>
-                    <p><span class="fa fa-envelope"></span>retrueque@gmail.com</p>
-                </section>
-            </section>
-
-            <form action="" class="formulario" id="formulario" name="formulario">
-                <h2>FORMULARIO DE CONTACTO</h2>
-
-                <div class="info">
-                    <label for="names">Nombre y Apellido </label>
-                    <input type="text" id="names" name="names">
-
-                    <label for="email">E-mail </label>
-                    <input type="text" id="email" name="email">
-
-                    <label for="asunto">Asunto </label>
-                    <textarea id="asunto" name="asunto"></textarea>
-
-                    <label for="mensaje">Mensaje </label>
-                    <textarea id="mensaje" name="mensaje"></textarea>
-
-                    <input type="submit" value="ENVIAR" id="btnSend">
-                </div>
+          </div>
+          
+          <div class="column middle" style="background-color:#ccc;">
+            <form action="">
+                <label for="usuario">Usuario:</label><br>
+                <input type="text" inputmode="email"><br>
+          
+                <label for="names">Nombre y Apellido </label><br>
+                <input type="text" id="names" name="names"><br>
+                
+                <label for="email">E-mail </label><br>
+                <input type="text" id="email" name="email"><br>
+              
+                <label for="edad">Edad</label><br>
+                <input type="text" id="edad" name="edad"><br>
+                
+                <label for="localidad">Localidad</label><br>
+                <input type="text" id="localidad" name="localidad"><br>
+                
             </form>
+          </div>
 
+          <div class="column right" style="background-color:rgb(204, 204, 204);">
+            <table>
+              <colgroup span="6" class="" width="15%"></colgroup>
+              <h3>Retrueques Propios</h3>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>IdProducto</th>
+                  <th>Descripcion</th>
+                  <th>Categoria</th>
+                  <th>Foto</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/notebook.jpg" alt="" width="100"></td>
+                  <td>Activo</td>
+                </tr>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/notebook.jpg" alt="" width="100"></td>
+                  <td>Activo</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <colgroup span="6" class="" width="15%"></colgroup>
+              <h3>Retrueques Realizados</h3>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>IdProducto</th>
+                  <th>Descripcion</th>
+                  <th>Categoria</th>
+                  <th>Foto</th>
+                  <th>del Usuario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/libros.jpg" alt="" width="100"></td>
+                  <td>JPMontoya</td>
+                </tr>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/jabones.jpg" alt="" width="100"></td>
+                  <td>MMayr</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
         </div>
+        <br>
+
         <!-- Seccion Footer  -->
         <footer class="footer margen-interno" data-aos="fade-up" data-aos-duration="1000">
             <div class="footer-logo" data-aos="fade-up" data-aos-duration="3000">

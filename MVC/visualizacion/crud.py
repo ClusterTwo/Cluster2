@@ -41,3 +41,5 @@ nuevoUsuario.cambioDeEmail(
         email=input('ingrese el nuevo e-mail: '),
         idUsuario = nuevoUsuario.consultaId(nuevoUsuario.email)
         )
+
+##tablaEstadosproductos(nuevoUsuario.idUsuario, nuevoUsuario.nuevoProducto.idProducto)

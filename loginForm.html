@@ -1,37 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-	<link rel="stylesheet" href="style-loginForm.css">
-	<title>Login/Registrarse pop-up</title>
-</head>
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="style.css">
+    <script src="loginJS.js"></script>
+</head>  
 <body>
-	<div class="contenedor">
-		<article>
-			<button id="btn-abrir-popup" class="btn-abrir-popup">Ingresar</button>
-		</article>
+    <form class="formulario">
+    <h1>Login</h1>
+    <div class="contenedor">
+        <div class="input-contenedor">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" placeholder="Correo Electronico" id="userEmail" name="userEmail">
+        </div>
+         
+        <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+            <input type="password" placeholder="Contraseña" id="userPassword" name="userPassword">
+        </div>
 
-		<div class="overlay" id="overlay">
-			<div class="popup" id="popup">
-				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-				<h3>Ingresá!</h3>
-				<form action="">
-					<div class="contenedor-inputs">
-						<input type="email" placeholder="Email">
-						<input type="password" placeholder="Contraseña">
-					</div>
-					<button id="no-acc" class="btn-submit">Crear Cuenta</button>
-					<input type="submit" class="btn-submit" value="Entrar">
-					<button id="no-pass" class="btn-submit">Recuperar Contraseña</button>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<script src="loginForm.js"></script>
+        <input type="submit" value="Login" class="button-login" onclick="return loginValidation();">
+        <p>¿No tienes una cuenta? <a class="link" href="regForm.html">Registrate </a></p>
+    </div>
+    </form>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="style.css">
+    <script src="regJS.js"></script>
+</head>  
+<body>
+    <form class="formulario">   
+    <h1>Registrate</h1>
+    <div class="contenedor">
+        <div class="input-contenedor">
+            <i class="fas fa-user icon"></i>
+            <input type="text" id="userName" name="userName" placeholder="Nombre">
+        </div>
+
+        <div class="input-contenedor">
+            <i class="fas fa-user icon"></i>
+            <input type="text" id="userLastName" name="userLastName" placeholder="Apellido">
+        </div>
+
+        <div class="input-contenedor">
+            <i class="fas fa-phone icon fa-rotate-90"></i>
+            <input type="text" id="userPhone" name="userPhone" placeholder="Número de Teléfono">
+        </div>
+         
+        <div class="input-contenedor">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" id="userEmail" name="userEmail" placeholder="Correo Electronico">
+        </div>
+         
+        <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+            <input type="password" id="userPassword" name="userPassword" placeholder="Contraseña">
+        </div>
+
+        <input type="submit" value="Registrate" class="button-registro" onclick="return regValidation();">
+        <p>Al registrarte, aceptas nuestras<a class="link" href=""> Condiciones de uso y Política de Privacidad </a>.</p>
+        <p>¿Ya tienes una cuenta? <a class="link" href="loginForm.html">Iniciar Sesion</a></p>
+    </div>
+    </form>
+</body>
+</html>

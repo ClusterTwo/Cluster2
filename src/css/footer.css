@@ -1,7 +1,7 @@
 /* SECCION FOOTER - Seccion Final */
 .footer{
     background: #929d79;
-    background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
+    background-image: -webkit-linear-gradient(hsla(78, 16%, 55%, 0.600), hsla(78, 16%, 55%, 0.600)), url(src\media\presentacion2.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -11,13 +11,13 @@
     align-items: center;
 }
 
-.footer li{
-    list-style: none; 
-}
+    .footer li{
+        list-style: none; 
+    }
 
-.footer ul li a{
-    color: #fff
-}
+        .footer ul li a{
+            color: #fff
+        }
 
 /* FOOTER LOGO */
 .footer-logo{
@@ -30,10 +30,10 @@
     justify-content: center;
 }
 
-.footer-logo h4{
-    font-size: 40px; 
-    font-weight: 500;
-    color: #fff;
+    .footer-logo h4{
+        font-size: 40px; 
+        font-weight: 500;
+        color: #fff;
                 
     }
 /* FOOTER ENLACES */
@@ -49,9 +49,9 @@
     letter-spacing: 1px;     
 }
 
-.footer-enlaces ul{
-    padding-left: 0px; 
-}
+    .footer-enlaces ul{
+        padding-left: 0px; 
+    }
 
 /* FOOTER CONTACTO */
 .footer-contacto{
@@ -67,15 +67,19 @@
     letter-spacing: 1px;      
 }
 
-.footer-contacto ul{
-     padding-left: 0px;
+    .footer-contacto ul{
+        padding-left: 0px;
+    }
+
+        .footer-contacto li a i{
+            margin-right: 10px;
+        }
+
+@media only screen and(max-width: 600px){
+    
 }
 
-.footer-contacto li a i{
-    margin-right: 10px;
-}
-
-      
+        
 @media only screen and (max-width: 768px) {
     .footer{
         display: flex;
@@ -105,4 +109,5 @@
         padding-top: 20px;
          
     }
+
 }

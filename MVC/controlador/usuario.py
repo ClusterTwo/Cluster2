@@ -3,26 +3,16 @@ path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\
 import mysql.connector 
 
 #cargar usuario
-def cargaDeUsuario(
-        email, 
-        nombre, 
-        apellido, 
-        telefono, 
-        password, 
-        nivelUsuario):
-    connection=mysql.connector.connect(
-    host='localhost',
-    database='retrueque',
-    user='root',
-    password='')
-    cursor = connection.cursor()
-    insertDato = """INSERT INTO Usuario ( email, nombre, apellido, telefono, password, nivelUsuario) 
-                                VALUES ( %s, %s, %s, %s, %s, %s) """
-    record = ( email, nombre, apellido, telefono, password,nivelUsuario)
-    cursor.execute(insertDato, record)
-    connection.commit()
-    cursor.close()
-    connection.close()
+nuevoUsuario = User(
+        email = input("Correo Electronico: "),
+        nombre = input("Nombre: "),
+        apellido = input("Apellido: "),
+        telefono = input("telefono: "),
+        fotoPerfil= "imagen",
+        password = input("ingresa clave: "),
+        nivelUsuario = input("ingrese el valor de usuario: "),
+        localidad = input('ingresa tu ciudad: ')
+        )
     
 
 #cambio de correo electronico

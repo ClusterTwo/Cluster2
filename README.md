@@ -35,4 +35,4 @@ Utilizamos distintas tecnologías para acompañar el trueque y hacer que funcion
 
 ## Autores
 
-- Website - [Cluster 2](https://github.com/ClusterTwo/Cluster2)
+- Website - [Cluster 2](https://cluster2.com.ar/)

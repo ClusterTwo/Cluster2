@@ -11,7 +11,7 @@ CREATE TABLE usuario (
   apellido VARCHAR(50) NOT NULL,
   telefono varchar(13) NULL,
   fotoPerfil LONGBLOB NULL,
-  nivelUsuario INT NOT NULL,
+  nivelUsuario VARCHAR (20) NOT NULL,
   localidad VARCHAR(45) NOT NULL,
   CONSTRAINT fk_nivelUsuario 
     FOREIGN KEY (nivelUsuario) 
@@ -20,8 +20,12 @@ CREATE TABLE usuario (
     FOREIGN KEY (localidad) 
     REFERENCES ciudad (nombreCiudad));
 
+CREATE TABLE capacidadDelUsuario (
+  nivelDeUsuario VARCHAR(20) NOT NULL,
+  PRIMARY KEY (nivelDeUsuario));
+
 CREATE TABLE ciudad (
-  nombreCiudad VARCHAR(45) NOT NULL DEFAULT 'Cordoba Capital',
+  nombreCiudad VARCHAR(45) NOT NULL DEFAULT 'Cordoba',
   codigoPostal INT NULL,
   PRIMARY KEY (nombreCiudad));
 
@@ -67,6 +71,7 @@ CREATE TABLE categorias (
 CREATE TABLE trade (
   idTransaccion INT NOT NULL,
   tradeidProducto INT NOT NULL,
+  tradeidUsuario INT NOT NULL,
   registro DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (idTransaccion),
   UNIQUE INDEX idTransaccion_UNIQUE (idTransaccion ASC) VISIBLE,

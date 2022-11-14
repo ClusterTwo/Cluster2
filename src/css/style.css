@@ -7,16 +7,103 @@ a {
 }
 
 /* CONTENEDOR PADRE DE LA WEB */
-.container {
-    max-width: 1400px;
+
+.container{
+    max-width: 100%;
     display: flex;
     flex-flow: column nowrap;
 }
 
+/*
 .margen-interno {
     padding: 0 50px;
+}*/
+
+
+/* SECCION HEADER -  MENÚ Y PRESENTACION DE MARCA */
+.header {
+    background: #929d79;
+    background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 40%;
 }
 
+.header-menu{
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-flow: row nowrap;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+/* Header - Logo */
+.header-menu-logo{
+    flex: 1 1 auto;
+    padding: 1%;
+}
+
+.menu-logo-img{
+    height: 50px;
+    border-radius: 50%;
+}
+    
+/* Header - Menu Navbar */
+.header-menu-navbar{
+    flex: 1 5 auto;
+}
+
+.header-menu-navbar a{
+    color: white;
+    font-size: 12px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.header-menu-navbar a:hover{
+    color: rgba(212, 212, 212, 0.884)
+}
+
+.header-menu-navbar i{
+    margin-right: 3px;
+}
+
+/* Header - Menu Usuario */  
+.header-menu-usuario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 auto;
+    font-size: 10px;
+}
+
+.usuario-login{
+    height: 28px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.header-presentation{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: transparent;
+    font-size: 7vw;
+    line-height: 1.6;
+    letter-spacing: 5px;
+    font-weight: 500;
+    -webkit-text-stroke : 1.1px white;
+}
 
 /* SECCION UNO - SECCION BIENVENIDA */
 .seccion-bienvenida {
@@ -27,10 +114,11 @@ a {
     justify-content: center;
 }
 
-.container-bienvenida {
+.container-bienvenida{
     height: auto;
     display: flex;
     flex-flow: column nowrap;
+    margin-left: 1%;
 }
 
 .bienvenida-uno {
@@ -49,27 +137,28 @@ a {
 }
 
 
-/* SECCION DOS: Main - SECCION PRODUCTOS */
-.seccion-productos {
-    background-color: #c6bfa6;
+/* SECCIÓN DOS: Main - SECCIÓN PRODUCTOS */
+.seccion-productos{
+    background-color: #c6bfa6; 
     background-position: center;
     background-size: cover;
     display: flex;
     height: auto;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 50px;   
+    padding-left: 2%;
 }
 
-.seccion-catalogo {
+.seccion-catalogo{
+    padding-bottom: 50px;
     display: flex;
     flex-flow: row wrap;
     flex: auto;
 }
 
-.seccion-catalogo-producto {
-    flex: 1 1 auto;
-    /* Ver tamaño de productos */
-    font-size: 8px;
+.seccion-catalogo-producto{
+    flex:1 1 auto; /* Ver tamaño de productos */
+    font-size: 12px;
     letter-spacing: 1px;
     margin-bottom: 5px;
 }
@@ -80,10 +169,22 @@ a {
     opacity: .8;
 }
 
-
+.card-body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+}
+    
+/* SECCION FOOTER - Seccion Final */
+.footer{
+    background: #929d79;
+    background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 20px;
+}
 
 /* Estilos nuevos Menú responsive */
-
 ul.alineado {
     display: flex;
     align-items: center;
@@ -100,14 +201,47 @@ img.usuario-login:hover {
 }
 
 @media screen and (max-width: 991px) {
-
-    ul.alineado {
-        align-items: flex-start;
-        gap: 5px;
-        padding: 5px 0 20px 0;
-    }
+.footer-logo{
+    flex:1 1 auto;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+h4{
+    font-size: 4vw; 
+    font-weight: 400;
+    color: #fff;    
+}
+
+.footer-enlaces,
+.footer-contacto{
+    flex:1 1 auto;
+    height: 300px; 
+    text-align: left; 
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 1px;     
+}
+
+.footer-enlaces ul,
+.footer-contacto ul{
+    padding-left: 0px; 
+}
+
+.footer-contacto li a i{
+    margin-right: 10px;
+}
+
+ul.alineado {
+    align-items: flex-start;
+    gap: 5px;
+    padding: 5px 0 20px 0;
+}
 
 @media screen and (max-width: 600px) {
 
@@ -127,44 +261,5 @@ img.usuario-login:hover {
     .bienvenida-dos {
         color: #fff;
         font-size: 10px;
-    }
-
-    /* SECCION DOS: Main - SECCION PRODUCTOS */
-    .seccion-productos {
-        background-color: #c6bfa6;
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        height: auto;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    .seccion-catalogo {
-        /* background-color: #f7f7f7; */
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-
-    }
-
-    .seccion-catalogo-producto {
-        /* background-color: #B4CDE6; */
-        flex: 1 1 auto;
-        /* Ver tamaño de productos */
-        font-size: 12px;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
-    }
-
-    .card {
-        background-color: #EEE3CB;
-        width: 100%;
-        opacity: .8;
-    }
-
-    .card-body {
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
     }
 }

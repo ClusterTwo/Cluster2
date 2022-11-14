@@ -14,11 +14,12 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Outfit&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Outfit&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Righteous">
-
     <!-- Assets -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/formulario-producto.css">
@@ -29,22 +30,21 @@
 </head>
 
 <body>
-     <!-- Container Padre -->
-    <div class="container">
+  <!-- Container Padre -->
+  <div class="container">
 
-          <!-- Menu Header -->
-          <header class="header">
-            <nav class="navbar navbar-expand-lg header-menu margen-interno">
-              <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                  aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand"  href="/index.html">
-                  <img class="menu-logo-img" src="../media/logo-copy.png" alt="">
-                </a>
-      
+    <!-- Menu Header - Contenedor Padre -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg header-menu margen-interno">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand"  href="index.html">
+            <img class="menu-logo-img" src="../media/logo-copy.png" alt="">
+          </a>
                 <div class="collapse navbar-collapse header-menu-navbar" id="navbarToggleExternalContent">
                   <ul class="navbar-nav alineado">
                     <li class="nav-item ">
@@ -91,47 +91,48 @@
             </div>
           </header>
   
-        
-        <!-- Container Formulario -->
-        <div class="contenido-prod">
+    <!-- Container Formulario -->
+      <div class="contenido-prod">
     
-            <section class="producto">
-                <h1>SUBÍ TUS FOTOS</h1>
+        <section class="producto">
+          <h1>SUBÍ TUS FOTOS</h1>
     
-                <div class="img-container">
-                  <img src="../media/img-container.png" alt="..." class="img">
-                </div>
-                <div id="preview"></div>
-    
-                <div class="subir">
-                    <button>SELECCIONA TUS ARCHIVOS</button>
-                    <input type="file" name="" id="file" hidden multiple>
-                </div>
-            </section>
-    
-            <form class="formulario" id="formulario">
-                <h2>FORMULARIO DE PRODUCTO</h2>
-    
-                <div class="info">
-                    <label for="names">TÍTULO</label>
-                    <input type="text" placeholder="Ingrese nombre del artículo" id="names">
-    
-                    <label for="descripcion">DESCRIPCIÓN</label>
-                    <textarea id="descripcion" placeholder="Describí tu artículo"></textarea>
-    
-                    <label for="interes">PREFERENCIAS</label>
-                    <textarea id="interes" placeholder="Preferencias de trueque"></textarea>
-    
-                    <input type="submit" value="PUBLICAR" id="btnSend">
-                </div>
-            </form>
-        </div>
-
-         <!-- Seccion Footer  -->
-         <footer class="footer margen-interno" data-aos="fade-up" data-aos-duration="1000">
-            <div class="footer-logo" data-aos="fade-up" data-aos-duration="3000">
-              <h4>ReTRUEQUE</h4>
+            <div class="img-container">
+              <img src="../media/img-container.png" alt="..." class="img">
             </div>
+            <div id="preview"></div>
+    
+            <div class="subir">
+              <button>SELECCIONA TUS ARCHIVOS</button>
+              <input type="file" name="" id="file" hidden multiple>
+            </div>
+        </section>
+    
+        <form class="formulario" id="formulario">
+          <h2>FORMULARIO DE PRODUCTO</h2>
+    
+            <div class="info">
+                <label for="names">TÍTULO</label>
+                <input type="text" placeholder="Ingrese nombre del artículo" id="names">
+    
+                <label for="descripcion">DESCRIPCIÓN</label>
+                <textarea id="descripcion" placeholder="Describí tu artículo"></textarea>
+    
+                <label for="interes">PREFERENCIAS</label>
+                <textarea id="interes" placeholder="Preferencias de trueque"></textarea>
+    
+                <input type="submit" value="PUBLICAR" id="btnSend">
+            </div>
+
+        </form>
+      </div>
+
+    <!-- Seccion Footer  -->
+    <footer class="footer margen-interno">
+      <div class="footer-logo" data-aos="fade-up" data-aos-duration="3000">
+        <h4>RETRUEQUE</h4>
+      </div>
+
             <div class="footer-enlaces" data-aos="fade-up" data-aos-duration="3000">
               <h5>ENLACES</h5>
               <ul>
@@ -167,6 +168,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>

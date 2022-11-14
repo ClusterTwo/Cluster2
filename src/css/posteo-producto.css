@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 30px;
-    width: 70%;
+    width: 70%; 
 }
 
 .nombre-producto{
@@ -26,7 +26,7 @@ body {
 
 .contenedor-contacto{
     display: block;
-    margin: auto;
+    margin: auto; 
 }
 
 .contenedor-contacto h2 {
@@ -48,7 +48,7 @@ body {
     cursor: pointer;
 }
 
-.contenedor-descripcion, .contenedor-intereses {
+.contenedor-descripcion, .contenedor-intereses {   
     border-radius: 10px;
     background: #929d79;
     margin: 50px 20px;

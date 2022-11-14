@@ -38,13 +38,14 @@ body {
     background-position: center;
 }
 
-.info_ h1{
+h1{
     margin-bottom: 60px;
     font-size: 2.5vw;
     font-weight: 100;
     text-align: center;
     color: #fff;
 }
+
 .info_ .items p:nth-child(1) span{
     font-size: 2vw;
     margin-left: 5px;
@@ -75,23 +76,25 @@ body {
     color: #fff;
 }
 
+
 /* form de mensaje */
 .formulario {
     width: 62%;
     padding: 30px 40px;
-}
-h2{
-    margin-bottom: 60px;
-    font-size: 2.5vw;
-    font-weight: 100;
-    text-align: left;
-    color: #fff;
 }
 
 .info{
     display: flex;
     flex-direction: column;
     color: transparent;
+}
+
+h2{
+    margin-bottom: 60px;
+    font-size: 2.5vw;
+    font-weight: 100;
+    text-align: left;
+    color: #fff;
 }
 
 label{

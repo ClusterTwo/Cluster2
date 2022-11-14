@@ -27,8 +27,8 @@ body {
 
 .producto h2{
     margin-top: 30px;
-    margin-bottom: 60px;
-    font-size: 30px;
+    margin-bottom: 30px;
+    font-size: 3vw;
     font-weight: 100;
     text-align: center;
     color: #fff;
@@ -73,7 +73,7 @@ body {
     padding: 30px 40px;
 }
 
-.formulario h2{
+.formulario h2 {
     margin-bottom: 60px;
     font-size: 3vw;
     font-weight: 100;
@@ -81,7 +81,7 @@ body {
     color: #fff;
 }
 
-.formulario .info{
+.info {
     display: flex;
     flex-direction: column;
     color: transparent;
@@ -92,14 +92,14 @@ label{
     color: #fff;
 }
 
-.formulario .info textarea{
+textarea {
     max-width: 100%;
     min-width: 100%;
     max-height: 90px;
 }
 
 input,
-textarea{
+textarea {
     width: 100%;
     padding: 8px 0 5px;
     margin-bottom: 20px;
@@ -114,7 +114,7 @@ textarea{
     font-weight: 20;
 }
 
-.formulario .info input[type="submit"]{
+input[type="submit"]{
     width: 180px;
     background: #929D79;
     padding: 10px;

@@ -3,12 +3,13 @@
     background: #929d79;
     background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
     background-position: center;
+
     background-attachment: fixed;
+    background-position: center;
     background-size: cover;
     display: flex;
-    flex-flow: row nowrap;
-    height: 400px;
-    align-items: center;
+    flex-flow: column nowrap;
+    height: 40%;
 }
 
 .footer li{
@@ -21,7 +22,6 @@
 
 /* FOOTER LOGO */
 .footer-logo{
-    /* background-color: #EEE3CB; */
     flex:1 1 auto;
     height: 400px;
     text-align: center;
@@ -34,11 +34,10 @@
     font-size: 40px; 
     font-weight: 500;
     color: #fff;
-                
-    }
+}
+             
 /* FOOTER ENLACES */
 .footer-enlaces{
-    /* background-color: #EEE3CB; */
     flex:1 1 auto;
     height: 300px; 
     text-align: left; 
@@ -55,7 +54,6 @@
 
 /* FOOTER CONTACTO */
 .footer-contacto{
-    /* background-color: #EEE3CB; */
     flex:1 1 auto;
     height: 300px;
     text-align: left; 
@@ -75,34 +73,30 @@
     margin-right: 10px;
 }
 
-      
+
 @media only screen and (max-width: 768px) {
-    .footer{
-        display: flex;
-        flex-flow: column;
-        height: auto;
-        align-items: center;
+.footer{
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    align-items: center;
     }
     
-    .footer-logo{
-        /* background-color: #EEE3CB; */
-        height: 90px;
+.footer-logo{
+    height: 90px;
     }
     
-    /* FOOTER ENLACES */
-    .footer-enlaces{
-        /* background-color: #EEE3CB; */
-        height: 200px; 
-        text-align: center;       
+/* FOOTER ENLACES */
+.footer-enlaces{
+    height: 200px; 
+    text-align: center;       
     }
     
-    /* FOOTER CONTACTO */
-    .footer-contacto{
-        /* background-color: #EEE3CB; */
-        height: 220px;
-        text-align: center; 
-        padding-bottom: 30px;
-        padding-top: 20px;
-         
+/* FOOTER CONTACTO */
+.footer-contacto{
+    height: 220px;
+    text-align: center; 
+    padding-bottom: 30px;
+    padding-top: 20px;      
     }
 }

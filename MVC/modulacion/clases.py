@@ -150,5 +150,31 @@ class producto():
         def correccionDatos(self):
             pass
 
+class trade(User,producto):
+    idTransaccion=0
+    tradeidProducto=0
+    tradeidUsuario=0
+    registro=""
+    
+    def __init__(self,idTransaccion,registro):
+        self.idTransaccion = idTransaccion
+        self.tradeidProducto = producto.idProducto
+        self.tradeidUsuario = User.idUsuario
+        self.registro = registro
 
+        connection=mysql.connector.connect(
+        host='localhost',
+        database='retrueque',
+        user='root',
+        password='')
+        cursor = connection.cursor()
+        insertDato = """INSERT INTO trade ( idTransaccion, tradeidProducto, tradeidUsuario, registro) 
+                                    VALUES ( %s, %s, %s, %s,) """
+        record = ( idTransaccion, producto.idProducto, User.idUsuario, registro)
+        cursor.execute(insertDato, record)
+        connection.commit()
+        print('El cambio se realizo con exito!!!')
+        cursor.close()
+        connection.close()
+        
  

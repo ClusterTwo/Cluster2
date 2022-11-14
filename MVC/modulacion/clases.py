@@ -6,13 +6,6 @@ from controlador.productos import *
 from email.mime import image
 from errno import EADDRNOTAVAIL
 
-def magic(lista):         
-    num = map(str, lista)   
-    num = ''.join(num)          
-    num = int(num)              
-    return num
- 
-  
 
 class User():
     idUsuario = 0
@@ -73,7 +66,7 @@ class User():
         self.nuevoProducto = producto(descripcion, categoria, interesDeIntercambio, fotoProducto,idUsuario,estadoProducto)
         return "producto cargado con exito"
 
-    def cambioDeEmail(email,idUsuario):
+    def cambioDeEmail(self,idUsuario,email):
         connection = mysql.connector.connect(
             host='localhost',
             database='retrueque',
@@ -85,26 +78,26 @@ class User():
         connection.commit()
         print(cursor.rowcount, "email actualizado")    
 
-    def retiroProducto(self):
-        pass
-
-    def confirmarTrade(self):
-        pass
+    
 
     def cambioDeContraseña(self,idUsuario,password):
-        self.password = input('ingrese nueva clave: ')
         connection = mysql.connector.connect(
             host='localhost',
             database='retrueque',
             user='root',
             password='')
-        updateDato = f" UPDATE usuario SET password ={password} WHERE idUsuario={idUsuario};"
-
+        updateDato = f" UPDATE usuario SET password = '{password}' WHERE idUsuario={idUsuario};"
         cursor = connection.cursor()
         cursor.execute(updateDato)
         connection.commit()
         print(cursor.rowcount, "contraseña actualizado") 
 
+
+    def retiroProducto(self):
+        pass
+
+    def confirmarTrade(self):
+        pass
 class producto():
     idProducto = 0
     descripcion = ""

@@ -6,6 +6,13 @@ from controlador.productos import *
 from email.mime import image
 from errno import EADDRNOTAVAIL
 
+def magic(lista):         
+    num = map(str, lista)   
+    num = ''.join(num)          
+    num = int(num)              
+    return num
+ 
+  
 
 class User():
     idUsuario = 0

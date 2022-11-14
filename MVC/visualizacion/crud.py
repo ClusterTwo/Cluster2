@@ -33,9 +33,8 @@ nuevoUsuario.cargaDeProducto(
         estadoProducto= "disponible"
         )
 
-nuevoUsuario.cambioDeContraseña(idDelUsuario,contraseña)
+nuevoUsuario.cambioDeContraseña(idDelUsuario,password = input('ingrese nueva clave: '))
         
 
-nuevoUsuario.cambioDeEmail(idDelUsuario,input('ingrese el nuevo e-mail: '))
+nuevoUsuario.cambioDeEmail(idDelUsuario,email=input('ingrese el nuevo e-mail: '))
         
-

@@ -1,40 +1,15 @@
 /* Estilo general */
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-
 :focus{
     outline: none;
 }
 
 body {
-    background: #c6bfa6;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-
-/* caja de contenido 
 .contenido-prod{
-    width: 1050px;
-    height: 530;
-    margin: 50px auto;
-    display: flex;
-
-    background: #929D79;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
-}*/
-
-.contenido-prod{
+    background: #c6bfa6;
     display: flex;
     overflow: hidden;
 }
@@ -50,11 +25,11 @@ body {
     justify-content: center;
 }
 
-.producto h1{
+.producto h2{
     margin-top: 30px;
     margin-bottom: 60px;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 100;
     text-align: center;
     color: #fff;
 }
@@ -68,6 +43,11 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+.img{
+    max-width: 50%;
+    max-height: 50%;
 }
 
 .producto button{
@@ -95,8 +75,8 @@ body {
 
 .formulario h2{
     margin-bottom: 60px;
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 3vw;
+    font-weight: 100;
     text-align: left;
     color: #fff;
 }
@@ -107,7 +87,7 @@ body {
     color: transparent;
 }
 
-.formulario label{
+label{
     font-weight: 20;
     color: #fff;
 }
@@ -118,8 +98,8 @@ body {
     max-height: 90px;
 }
 
-.formulario .info input,
-.formulario .info textarea{
+input,
+textarea{
     width: 100%;
     padding: 8px 0 5px;
     margin-bottom: 20px;
@@ -147,4 +127,26 @@ body {
     font-family: "montserrat";
     font-weight: 20;
     cursor: pointer;
+}
+
+@media all and (max-width:720px) {
+    .contenido-prod{
+        flex-direction: column;
+    }
+    .producto{
+        width: 100%;
+    }
+    .producto h1{
+        margin-bottom: 30px;
+    }
+    .img-container{
+        height: 80%;
+        width: 60%;
+    }
+    .formulario{
+        width: 100%;
+    }
+    .info{
+        width: 80%;
+    }
 }

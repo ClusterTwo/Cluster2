@@ -3,25 +3,20 @@ body {
 }
 
 .contenedor{
-
     display: flex;
     justify-content: space-around;
     margin: 50px 20px;
     border-radius: 10px;
     padding: 30px;
     background: #929d79;
-
 }
 
 .contenedor-foto{
-    
-   
     border-radius: 10px;
     display: flex;
     justify-content: center;
     padding: 30px;
     width: 70%;
-    
 }
 
 .nombre-producto{
@@ -32,14 +27,13 @@ body {
 .contenedor-contacto{
     display: block;
     margin: auto;
-
-    
 }
 
 .contenedor-contacto h2 {
     text-align: center;
     padding: 20px;
 }
+
 .boton-enviar{
     display: flex;
     justify-content: center;
@@ -52,16 +46,13 @@ body {
     font-family: "montserrat";
     font-weight: 20;
     cursor: pointer;
-
 }
+
 .contenedor-descripcion, .contenedor-intereses {
-    
     border-radius: 10px;
     background: #929d79;
     margin: 50px 20px;
-    
     padding: 10px;
-
 }
 
 

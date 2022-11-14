@@ -71,6 +71,7 @@ CREATE TABLE categorias (
 CREATE TABLE trade (
   idTransaccion INT NOT NULL,
   tradeidProducto INT NOT NULL,
+  tradeidUsuario INT NOT NULL,
   registro DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (idTransaccion),
   UNIQUE INDEX idTransaccion_UNIQUE (idTransaccion ASC) VISIBLE,

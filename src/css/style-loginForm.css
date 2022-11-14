@@ -2,6 +2,7 @@
 .contenedor article {
 	justify-content: right;
 	display: flex;
+	height: 600px;
 }
 
 .contenedor article .btn-abrir-popup {
@@ -9,7 +10,7 @@
 	margin-top: 10px;
 	line-height: 40px;
 	border: none;
-	color: #0c5129;
+	color: #9;
 	background: white;
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;

@@ -1,8 +1,8 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -13,10 +13,12 @@ a{
     flex-flow: column nowrap;
 }
 
-/*.margen-interno{
+/*
+.margen-interno {
     padding: 0 50px;
 }*/
 
+<<<<<<< HEAD
 /* SECCION HEADER -  MENÚ Y PRESENTACION DE MARCA */
 .header {
     background: #929d79;
@@ -102,9 +104,9 @@ h1{
     -webkit-text-stroke : 1.1px white;
 }
 
-    
+
 /* SECCION UNO - SECCION BIENVENIDA */
-.seccion-bienvenida{
+.seccion-bienvenida {
     height: 500px;
     background-color: #c6bfa6;
     display: flex;
@@ -119,7 +121,7 @@ h1{
     margin-left: 1%;
 }
 
-.bienvenida-uno{
+.bienvenida-uno {
     height: auto;
 }
 
@@ -130,7 +132,7 @@ h1{
     font-weight: 500;
 }
 
-.bienvenida-dos{
+.bienvenida-dos {
     color: #fff;
     font-size: 15px;
 }
@@ -149,9 +151,10 @@ h1{
 }
 
 .seccion-catalogo{
+    padding-bottom: 50px;
     display: flex;
     flex-flow: row wrap;
-    flex: auto;     
+    flex: auto;
 }
 
 .seccion-catalogo-producto{
@@ -161,7 +164,7 @@ h1{
     margin-bottom: 5px;
 }
 
-.card{
+.card {
     background-color: #EEE3CB;
     width: 100%;
     opacity: .8;
@@ -182,13 +185,23 @@ h1{
     padding: 20px;
 }
 
-.footer li{
-    list-style: none; 
+/* Estilos nuevos Menú responsive */
+ul.alineado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+    padding: 20px 0;
 }
 
-.footer ul li a{
-    color: #fff
+img.usuario-login:hover {
+    transition: all ease 250ms;
+    cursor: pointer;
+    opacity: .5;
 }
+
+@media screen and (max-width: 991px) {
 
 .footer-logo{
     flex:1 1 auto;
@@ -226,22 +239,30 @@ h4{
     margin-right: 10px;
 }
 
-@media all and (max-width:720px) {
-    /*sección bienvenida */
-    .seccion-bienvenida{
-        height: 60%;
-        padding-top: 4%;
-    }
-    .bienvenida-dos{
-        font-size: 2vw;
-    }
-    /*sección presentación */
-    .header-presentation {
-        height: 40%;
-    }
-    /*sección prodcutos */
-    .seccion-catalogo{
-        flex-direction: column;
-        align-content: space-around;
-    }
+ul.alineado {
+    align-items: flex-start;
+    gap: 5px;
+    padding: 5px 0 20px 0;
 }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* SECCION BIENVENIDA - SLOGAN MARCA */
+    .seccion-bienvenida {
+        height: 300px;
+    }
+
+    .bienvenida-uno h2 {
+        font-size: 50px;
+        /* line-height: 1.3; */
+        color: #fff;
+        letter-spacing: 5px;
+        font-weight: 700;
+    }
+
+    .bienvenida-dos {
+        color: #fff;
+        font-size: 10px;
+    }

@@ -1,5 +1,5 @@
 //Captura de Datos
-var form = document.getElementById("formulario"),
+let form = document.getElementById("formulario"),
 elementos = form.elements,
 boton = document.getElementById("btnSend");
 
@@ -14,8 +14,8 @@ validarNombre = function(e){
 
 //Validacion de E-mail
 validarEmail = function(email){
-    var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    var emailValido = expReg.test(email);
+    let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    let emailValido = expReg.test(email);
     if (emailValido == false) {
         alert('Introduzca un E-mail valido');
     }
@@ -24,7 +24,7 @@ validarEmail = function(email){
 // Validacion de Asunto
 validarAsunto = function(e){
     if (form.asunto.value == 0) {
-        alert("Ingrese un asunto, por favor")
+        alert("Ingrese un asunto, por favor");
         e.preventDefault();
     }  
 }
@@ -33,14 +33,14 @@ validarAsunto = function(e){
 
 validarMensaje = function(e){
     if (form.mensaje.value == 0) {
-        alert("Ingrese un mensaje, por favor")
+        alert("Ingrese un mensaje, por favor");
         e.preventDefault();
     }  
 }
 
 //Funcion validadora
 
-var validar = function(e){
+let validar = function(e){
     validarNombre(e)
     validarEmail(form.email.value)
     validarAsunto(e)

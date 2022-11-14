@@ -11,7 +11,6 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,18 +20,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Assets -->
-    <link rel="stylesheet" href="/src/css/normalize.css">
-    <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="stylesheet" href="/src/css/posteo-producto.css">
+    <link rel="stylesheet" href="../css/controlpanel.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-loginForm.css">
+	
     <!-- Title  -->
     <title>ReTrueque | Home </title>
 </head>
 
 <body>
-    <!-- Menu Header -->
-     <header class="header">
+  <!-- Container Padre -->
+  <div class="container">
+
+    <!-- Menu Header - Contenedor Padre -->
+    <header class="header">
       <nav class="navbar navbar-expand-lg header-menu margen-interno">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,29 +45,29 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand"  href="/index.html">
+          <a class="navbar-brand"  href="index.html">
             <img class="menu-logo-img" src="../media/logo-copy.png" alt="">
           </a>
 
           <div class="collapse navbar-collapse header-menu-navbar" id="navbarToggleExternalContent">
             <ul class="navbar-nav alineado">
               <li class="nav-item ">
-                <a class="nav-link" aria-current="page" href="/index.html">
+                <a class="nav-link" aria-current="page" href="index.html">
                   <i class="fa-solid fa-house"></i>HOME
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="quienessomos.html">
+                <a class="nav-link" href="../pages/quienessomos.html">
                   <i class="fa-solid fa-users"></i>QUIENES SOMOS
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/index.html#seccion-productos">
+                <a class="nav-link" href="index.html#seccion-productos">
                   <i class="fa-solid fa-bolt"></i>PRODUCTOS
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="formulario-contacto.html"><i
+                <a class="nav-link" href="../pages/formulario-contacto.html"><i
                     class="fa-solid fa-paper-plane"></i>CONTACTO
                 </a>
               </li>
@@ -72,7 +77,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="loginForm.html">
+                <a href="../pages/loginForm.html">
                   <img src="../media/stroke.svg" class="usuario-login" alt="user-icon" id="user"
                     title="Iniciar Sesión">
                 </a>
@@ -85,36 +90,125 @@
         </div>
       </nav>
 
-      <div class="header-presentation">
-        <h1>RETRUEQUE</h1>
-      </div>
-    </header>
+      <!-- Sección Panel -->
+      <h1 aling="center">Panel de Control</h1>
 
-    <div class="contenedor">
-        <div class="contenedor-foto">
-            <h1 class="nombre-producto">Nombre del producto</h1>
+        </header>
+
+
+        <br>
+
+        <div class="row">
+
+          <div class="column left" style="background-color:#aaa;">
+            <img src="../media/user.png" alt="usuario" width="100" height="100" aling="center">
             <br>
-            <img src="src/media/img/descarga.jpg" alt="Foto del producto que subio el usuario">
-        </div>
-        <div class="contenedor-contacto">
-            <h2>Contacto</h2>
-            <a href="/src/pages/formulario-contacto-cliente.html" class="boton-enviar">Enviar Mensaje</a>
-        </div>
-    </div>
+            <br>
+            <button>Cambiar Imagen Perfil</button>
+            <br>
+            <button>Cambiar Password</button>
+            <br>
+            <button>Agregar Retrueque</button>
 
-    <div class="contenedor-descripcion">
-        <h2>Descripcion</h2>
-        <p class="descripcion-producto"></p>
-    </div>
-    <div class="contenedor-intereses">
-        <h2>Intereses</h2>
-    </div>
+          </div>
+          
+          <div class="column middle" style="background-color:#ccc;">
+            <form action="">
+                <label for="usuario">Usuario:</label><br>
+                <input type="text" inputmode="email"><br>
+          
+                <label for="names">Nombre y Apellido </label><br>
+                <input type="text" id="names" name="names"><br>
+                
+                <label for="email">E-mail </label><br>
+                <input type="text" id="email" name="email"><br>
+              
+                <label for="edad">Edad</label><br>
+                <input type="text" id="edad" name="edad"><br>
+                
+                <label for="localidad">Localidad</label><br>
+                <input type="text" id="localidad" name="localidad"><br>
+                
+            </form>
+          </div>
 
-  <!-- Seccion Footer  -->
+          <div class="column right" style="background-color:rgb(204, 204, 204);">
+            <table>
+              <colgroup span="6" class="" width="15%"></colgroup>
+              <h3>Retrueques Propios</h3>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>IdProducto</th>
+                  <th>Descripcion</th>
+                  <th>Categoria</th>
+                  <th>Foto</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/notebook.jpg" alt="" width="100"></td>
+                  <td>Activo</td>
+                </tr>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/notebook.jpg" alt="" width="100"></td>
+                  <td>Activo</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <colgroup span="6" class="" width="15%"></colgroup>
+              <h3>Retrueques Realizados</h3>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>IdProducto</th>
+                  <th>Descripcion</th>
+                  <th>Categoria</th>
+                  <th>Foto</th>
+                  <th>del Usuario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/libros.jpg" alt="" width="100"></td>
+                  <td>JPMontoya</td>
+                </tr>
+                <tr>
+                  <td>12/12/21</td>
+                  <td>001500</td>
+                  <td>Computadora Dell</td>
+                  <td>Informatica</td>
+                  <td><img src="../media/jabones.jpg" alt="" width="100"></td>
+                  <td>MMayr</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <br>
+
+    <!-- Seccion Footer  -->
     <footer class="footer margen-interno">
       <div class="footer-logo" data-aos="fade-up" data-aos-duration="3000">
         <h4>RETRUEQUE</h4>
       </div>
+
       <div class="footer-enlaces" data-aos="fade-up" data-aos-duration="3000">
         <h5>ENLACES</h5>
         <ul>
@@ -124,8 +218,8 @@
           <li><a href="../pages/formulario-contacto.html"></i>Contacto</a></li>
           <li><a href=""></i>Soporte</a></li>
         </ul>
-
       </div>
+
       <div class="footer-contacto" data-aos="fade-up" data-aos-duration="3000">
         <h5>CONTACTO</h5>
         <ul>
@@ -141,8 +235,9 @@
     </footer>
   </div>
 
-<!-- Seccion Script  -->
+    <!-- Sección Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/src/js/ValidateForm-contacto.js"></script>
     <script>
         AOS.init();
     </script>

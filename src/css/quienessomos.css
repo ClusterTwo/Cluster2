@@ -1,6 +1,10 @@
 /* SECCIÓN HEADER TÍTULOS *//*buscar usar porcentajes en medidas*/ 
 h2{
     font-size: 4.2vw;
+}
+/* header títulos */
+.definicion-retrueque h1, h2{
+    font-size: 40px;
     color: #fff;
     letter-spacing: 5px;
     font-weight: 300; 

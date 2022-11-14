@@ -1,24 +1,23 @@
-*{
-    margin: 10px 30px 0 30px;
+body {
+    background: #c6bfa6;
 }
 
 .contenedor{
+
     display: flex;
     justify-content: space-around;
-    border: 1px solid #000;
+    margin: 50px 20px;
     border-radius: 10px;
     padding: 30px;
-
+    background: #929d79;
 }
 
 .contenedor-foto{
-    
-    border: 1px solid #000;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     padding: 30px;
-    
+    width: 70%; 
 }
 
 .nombre-producto{
@@ -27,25 +26,34 @@
 }
 
 .contenedor-contacto{
-    display: flex;
-    align-items: center;
-    
+    display: block;
+    margin: auto; 
 }
+
+.contenedor-contacto h2 {
+    text-align: center;
+    padding: 20px;
+}
+
 .boton-enviar{
-   text-decoration: none; 
-   font-size: 20px;
-   border: 2px solid #000;
-   border-radius: 7px;
-   padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    background: hsla(47, 22%, 71%, 0.808);
+    padding: 10px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "montserrat";
+    font-weight: 20;
+    cursor: pointer;
 
 }
-.contenedor-descripcion{
-    border: 1px solid #000;
+.contenedor-descripcion, .contenedor-intereses {   
     border-radius: 10px;
-
+    background: #929d79;
+    margin: 50px 20px;
+    padding: 10px;
 }
-.contenedor-intereses{
-    border: 1px solid #000;
-    border-radius: 10px;
 
-}
+

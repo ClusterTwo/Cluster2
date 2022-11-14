@@ -22,7 +22,7 @@ a {
 /* SECCION HEADER -  MENÚ Y PRESENTACION DE MARCA */
 .header {
     background: #929d79;
-    background-image: linear-gradient(rgba(148, 159, 122, 0.6), rgba(148, 159, 122, 0.6)), url(../media/fondo.jpg);
+    background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -178,7 +178,7 @@ h1{
 /* SECCION FOOTER - Seccion Final */
 .footer{
     background: #929d79;
-    background-image: linear-gradient(rgba(148, 159, 122, 0.6), rgba(148, 159, 122, 0.6)), url(../media/fondo.jpg);
+    background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;

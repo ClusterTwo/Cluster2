@@ -1,5 +1,5 @@
-#from sys import path
-#path.append('C:\\Users\\pablo\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages')
+from sys import path
+path.append('C:\\Users\\pablo\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages')
 import mysql.connector
 
 connection = mysql.connector.connect (
@@ -238,7 +238,6 @@ finally:
         cursor.close()
         connection.close()
         print("Fin de conneccion con MySQL")        
-
 
 
 

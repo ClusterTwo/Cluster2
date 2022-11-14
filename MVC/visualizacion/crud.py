@@ -1,7 +1,6 @@
 from sys import path
 path.append('C:\\Users\\pablo\\Documents\\Ispc\\ClusterTwo\\Cluster2\\MVC')
 path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\\site-packages')
-from modulacion.dataBase import *
 from modulacion.clases import *
 from controlador.baseDatos import *
 
@@ -13,7 +12,7 @@ insertarEstados(['disponible'],['en pausa'],['trocado'],['eliminado'])
 insertarNivelesUsuarios(['eventual'],['registrado'],['administrador'])
 
 nuevoUsuario = User(
-        email = 'pmontoasdya@gmial.com',#input("Correo Electronico: "),
+        email = 'pmontoya@gmial.com',#input("Correo Electronico: "),
         nombre = 'pablo',#input("Nombre: "),
         apellido = 'montoya',#input("Apellido: "),
         telefono = '239482347',#input("telefono: "),
@@ -22,24 +21,21 @@ nuevoUsuario = User(
         nivelUsuario = 'registrado', #input("ingrese el valor de usuario: "))
         localidad = "Cordoba"
         )
+idDelUsuario = nuevoUsuario.consultaId(nuevoUsuario.email)
+
 
 nuevoUsuario.cargaDeProducto(
-        descripcion="zapatillas",#input("ingrese una leve descripcion del producto: "),
+        descripcion = "zapatillas",#input("ingrese una leve descripcion del producto: "),
         categoria = "calzados",#input("cual es su categoria: "),
         interesDeIntercambio = "pantalones",#input("porque desea intercambiar: "),
-        fotoProducto= "imagen",
-        idUsuario = nuevoUsuario.consultaId(nuevoUsuario.email),
+        fotoProducto = "imagen",
+        idUsuario = idDelUsuario,
         estadoProducto= "disponible"
         )
 
-nuevoUsuario.cambioDeContraseña(
-        password=input("ingresar nueva contraseña: "),
-        idUsuario = nuevoUsuario.consultaId(nuevoUsuario.email)
-        )
+nuevoUsuario.cambioDeContraseña(idDelUsuario,contraseña)
+        
 
-nuevoUsuario.cambioDeEmail(
-        email=input('ingrese el nuevo e-mail: '),
-        idUsuario = nuevoUsuario.consultaId(nuevoUsuario.email)
-        )
+nuevoUsuario.cambioDeEmail(idDelUsuario,input('ingrese el nuevo e-mail: '))
+        
 
-##tablaEstadosproductos(nuevoUsuario.idUsuario, nuevoUsuario.nuevoProducto.idProducto)

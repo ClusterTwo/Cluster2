@@ -73,14 +73,13 @@ class User():
         self.nuevoProducto = producto(descripcion, categoria, interesDeIntercambio, fotoProducto,idUsuario,estadoProducto)
         return "producto cargado con exito"
 
-    def cambioDeEmail(self,email,idUsuario):
+    def cambioDeEmail(email,idUsuario):
         connection = mysql.connector.connect(
             host='localhost',
             database='retrueque',
             user='root',
             password='')
-        updateDato = f" UPDATE email SET email ='{email}' WHERE idUsuario={idUsuario};"
-
+        updateDato = f" UPDATE usuario SET email ='{email}' WHERE idUsuario={idUsuario};"
         cursor = connection.cursor()
         cursor.execute(updateDato)
         connection.commit()
@@ -92,14 +91,14 @@ class User():
     def confirmarTrade(self):
         pass
 
-    def cambioDeContraseña(self,password,email):
+    def cambioDeContraseña(self,idUsuario,password):
+        self.password = input('ingrese nueva clave: ')
         connection = mysql.connector.connect(
             host='localhost',
             database='retrueque',
             user='root',
             password='')
-        idUsuario = f"SELECT idUsuario FROM usuario WHERE email ='{email}';"
-        updateDato = f" UPDATE email SET password ='{password}' WHERE idUsuario={idUsuario};"
+        updateDato = f" UPDATE usuario SET password ={password} WHERE idUsuario={idUsuario};"
 
         cursor = connection.cursor()
         cursor.execute(updateDato)

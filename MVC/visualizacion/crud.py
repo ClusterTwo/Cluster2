@@ -1,41 +1,41 @@
 from sys import path
 path.append('C:\\Users\\pablo\\Documents\\Ispc\\ClusterTwo\\Cluster2\\MVC')
 path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\\site-packages')
-
 from modulacion.clases import *
 from controlador.baseDatos import *
 
 
-#instanciadorBaseDatos()
-#
-#cambioDeContraseña(
-#        password=input("ingresar nueva contraseña: "),
-#        idUsuario= 1
-#        )
-#
-#cambioDeEmail(
-#        email=input('ingrese el nuevo e-mail: '),
-#        idUsuario= 1
-#        )
-#
+instanciadorBaseDatos()
+insertarCategoria(['calzados'],['camperas'],['plantas'],['herramientas'])
+insertarCiudades(["Cordoba"],["CABA"],["Rosario"])
+insertarEstados(['disponible'],['en pausa'],['trocado'],['eliminado'])
+insertarNivelesUsuarios(['eventual'],['registrado'],['administrador'])
+
 nuevoUsuario = User(
-        email = 'pablo@asdasd',#input("Correo Electronico: "),
+        email = 'pmontoya@gmial.com',#input("Correo Electronico: "),
         nombre = 'pablo',#input("Nombre: "),
         apellido = 'montoya',#input("Apellido: "),
         telefono = '239482347',#input("telefono: "),
         fotoPerfil= "imagen",
         password = 'asdo78asd7',#input("ingresa clave: "),
-        nivelUsuario = 1, #int(input("ingrese el valor de usuario: "))
+        nivelUsuario = 'registrado', #input("ingrese el valor de usuario: "))
         localidad = "Cordoba"
         )
+idDelUsuario = nuevoUsuario.consultaId(nuevoUsuario.email)
+
 
 nuevoUsuario.cargaDeProducto(
-        descripcion = input("ingrese una leve descripcion del producto: "),
-        categoria = input("cual es su categoria: "),
-        interesDeIntercambio = input("porque desea intercambiar: "),
-        fotoProducto= "imagen",
-        idUsuario= nuevoUsuario.idUsuario,
+        descripcion = "zapatillas",#input("ingrese una leve descripcion del producto: "),
+        categoria = "calzados",#input("cual es su categoria: "),
+        interesDeIntercambio = "pantalones",#input("porque desea intercambiar: "),
+        fotoProducto = "imagen",
+        idUsuario = idDelUsuario,
         estadoProducto= "disponible"
         )
 
-##tablaEstadosproductos(nuevoUsuario.idUsuario, nuevoUsuario.nuevoProducto.idProducto)
+nuevoUsuario.cambioDeContraseña(idDelUsuario,contraseña)
+        
+
+nuevoUsuario.cambioDeEmail(idDelUsuario,input('ingrese el nuevo e-mail: '))
+        
+

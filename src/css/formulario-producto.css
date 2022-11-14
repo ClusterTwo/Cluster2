@@ -4,7 +4,6 @@
 }
 
 body {
-    
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
@@ -88,7 +87,7 @@ body {
     color: transparent;
 }
 
-label {
+label{
     font-weight: 20;
     color: #fff;
 }

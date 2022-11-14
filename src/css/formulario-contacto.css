@@ -33,7 +33,7 @@ body {
     justify-content: center;
 
     background: #929d79;
-    background-image: linear-gradient(rgba(148, 159, 122, 0.600),rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
+    background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -43,19 +43,6 @@ h1{
     font-size: 2.5vw;
     font-weight: 100;
     text-align: center;
-    color: #fff;
-}
-.items p{
-    display: flex;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 20;
-    margin-bottom: 10px;
-}
-.info_ h1,
-.info_ .items{
-    position: relative;
-    z-index: 2;
     color: #fff;
 }
 
@@ -74,6 +61,19 @@ h1{
     font-size: 2vw;
     margin-right: 10px;
     margin-left: 4px;
+}
+.info_ .items p{
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 20;
+    margin-bottom: 10px;
+}
+.info_ h1,
+.info_ .items{
+    position: relative;
+    z-index: 2;
+    color: #fff;
 }
 
 

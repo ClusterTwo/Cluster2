@@ -3,7 +3,6 @@ body {
 }
 
 .contenedor{
-
     display: flex;
     justify-content: space-around;
     margin: 50px 20px;
@@ -47,8 +46,8 @@ body {
     font-family: "montserrat";
     font-weight: 20;
     cursor: pointer;
-
 }
+
 .contenedor-descripcion, .contenedor-intereses {   
     border-radius: 10px;
     background: #929d79;

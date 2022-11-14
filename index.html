@@ -20,10 +20,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Assets -->
-  <link rel="stylesheet" href="../src/css/normalize.css">
-  <link rel="stylesheet" href="../src/css/style.css">
-  <link rel="stylesheet" href="../src/css/navbar.css">
-  <link rel="stylesheet" href="../src/css/footer.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+
   <!-- Title  -->
   <title>ReTrueque | Home </title>
 </head>
@@ -31,11 +32,18 @@
 <body>
   <!-- Container Padre -->
   <div class="container">
-    <header class="header"><!-- Menu Header -->
-      
-      <div class="header-menu margen-interno" data-aos="fade-up" data-aos-duration="2000">
-        <div class="header-menu-logo">
-          <a href="../../index.html">
+
+    <!-- Menu Header - Contenedor Padre -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg header-menu margen-interno">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand"  href="index.html">
+
             <img class="menu-logo-img" src="../media/logo-copy.png" alt="">
           </a>
 
@@ -99,86 +107,93 @@
     </section>
 
     <!-- Seccion Productos  -->
-      <div class="seccion-productos margen-interno" id="seccion-productos">
-        <div class="seccion-catalogo">
-
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/zapatilla.jpeg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
+    <div class="seccion-productos margen-interno" id="seccion-productos">
+      <div class="seccion-catalogo">
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/zapatilla.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/shampoo.jpeg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
-              </div>
+        </div>
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/shampoo.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/ropa.jpeg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
-              </div>
+        </div>
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/ropa.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/auto.jpeg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
-              </div>
+        </div>
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/auto.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/notebook.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
-              </div>
+        </div>
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/notebook.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/disquera.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
-                </div>
+        </div>
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/disquera.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/jabones.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
-              </div>
+        </div>
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/jabones.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
-          <div class="seccion-catalogo-producto">
-            <div class="card" style="width: 18rem;">
-                <img src="../media/libros.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
-              </div>
+        </div>
+        <div class="seccion-catalogo-producto">
+          <div class="card" style="width: 18rem;">
+            <img src="../media/libros.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="../pages/posteo-producto.html" class="btn btn-dark">Ver Detalle</a>
             </div>
           </div>
 
@@ -190,9 +205,9 @@
       <div class="footer-enlaces" data-aos="fade-up" data-aos-duration="3000">
         <h5>ENLACES</h5>
         <ul>
-          <li><a href="../Cluster2/index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="../pages/quienessomos.html">Quienes Somos</a></li>
-          <li><a href="../index.html#seccion-productos">Productos</a></li>
+          <li><a href="index.html#seccion-productos">Productos</a></li>
           <li><a href="../pages/formulario-contacto.html"></i>Contacto</a></li>
           <li><a href="https://cluster2.com.ar/"></i>Soporte</a></li>
         </ul>
@@ -211,8 +226,7 @@
       </div>
     </footer>
   </div>
-
-<!-- Seccion Script  -->
+  <!-- Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();

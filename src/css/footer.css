@@ -1,7 +1,9 @@
 /* SECCION FOOTER - Seccion Final */
 .footer{
     background: #929d79;
-    background-image: linear-gradient(rgba(148, 159, 122, 0.6), rgba(148, 159, 122, 0.6)), url(../media/fondo.jpg);
+    background-image: linear-gradient(rgba(148, 159, 122, 0.600), rgba(148, 159, 122, 0.600)), url(../media/fondo.jpg);
+    background-position: center;
+
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -33,7 +35,7 @@
     font-weight: 500;
     color: #fff;
 }
-
+             
 /* FOOTER ENLACES */
 .footer-enlaces{
     flex:1 1 auto;
@@ -64,14 +66,14 @@
 }
 
 .footer-contacto ul{
-    padding-left: 0px;
+     padding-left: 0px;
 }
 
 .footer-contacto li a i{
     margin-right: 10px;
 }
 
-       
+
 @media only screen and (max-width: 768px) {
 .footer{
     display: flex;

@@ -1,5 +1,4 @@
 from sys import path
-
 path.append('C:\\Users\\pablo\\Documents\\Ispc\\ClusterTwo\\Cluster2\\MVC')
 path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\\site-packages')
 import mysql.connector 
@@ -7,6 +6,13 @@ from controlador.productos import *
 from email.mime import image
 from errno import EADDRNOTAVAIL
 
+def magic(lista):         
+    num = map(str, lista)   
+    num = ''.join(num)          
+    num = int(num)              
+    return num
+ 
+  
 
 class User():
     idUsuario = 0
@@ -17,7 +23,7 @@ class User():
     telefono = ""
     edad = 0
     fotoPerfil = "imagen"
-    nivelUsuario = 0
+    nivelUsuario = ""
     localidad = ""
 
 
@@ -39,24 +45,65 @@ class User():
         user='root',
         password='')
         cursor = connection.cursor()
-        insertDato = """INSERT INTO Usuario ( email, nombre, apellido, fotoPerfil, telefono, password, nivelUsuario, localidad) 
+        insertDato = """INSERT INTO Usuario ( email, nombre, apellido, fotoPerfil, telefono, password, nivelUsuario,localidad) 
                                     VALUES ( %s, %s, %s,%s, %s, %s, %s, %s) """
         record = ( email, nombre, apellido, fotoPerfil, telefono, password,nivelUsuario,localidad)
         cursor.execute(insertDato, record)
         connection.commit()
+        print('se creo con exito la cuenta!!!')
         cursor.close()
         connection.close()
+
+    def consultaId(self,email):
+        connection = mysql.connector.connect(host='localhost',
+                                                 database='retrueque',
+                                                 user='root',
+                                                 password='')
+
+        consulta = f"SELECT idUsuario FROM usuario WHERE email ='{email}';" 
+        cursor = connection.cursor()
+        cursor.execute(consulta)
+        fila=cursor.fetchall()
+        numeroId = fila[0]
+        idUsuario = int('.'.join(str(ele) for ele in numeroId))
+        return idUsuario
+
 
     def cargaDeProducto(self,descripcion, categoria, interesDeIntercambio, fotoProducto,idUsuario,estadoProducto):
         self.nuevoProducto = producto(descripcion, categoria, interesDeIntercambio, fotoProducto,idUsuario,estadoProducto)
         return "producto cargado con exito"
-    
+
+    def cambioDeEmail(email,idUsuario):
+        connection = mysql.connector.connect(
+            host='localhost',
+            database='retrueque',
+            user='root',
+            password='')
+        updateDato = f" UPDATE usuario SET email ='{email}' WHERE idUsuario={idUsuario};"
+        cursor = connection.cursor()
+        cursor.execute(updateDato)
+        connection.commit()
+        print(cursor.rowcount, "email actualizado")    
 
     def retiroProducto(self):
         pass
 
     def confirmarTrade(self):
         pass
+
+    def cambioDeContraseña(self,idUsuario,password):
+        self.password = input('ingrese nueva clave: ')
+        connection = mysql.connector.connect(
+            host='localhost',
+            database='retrueque',
+            user='root',
+            password='')
+        updateDato = f" UPDATE usuario SET password ={password} WHERE idUsuario={idUsuario};"
+
+        cursor = connection.cursor()
+        cursor.execute(updateDato)
+        connection.commit()
+        print(cursor.rowcount, "contraseña actualizado") 
 
 class producto():
     idProducto = 0
@@ -84,11 +131,13 @@ class producto():
         database='retrueque',
         user='root',
         password='')
-
         cursor = connection.cursor()
-        insertDato = f"INSERT INTO productos ( descripcion, categoria, interesDeIntercambio, fotoProducto, usuarioProducto) VALUES ( {descripcion}, {categoria}, {interesDeIntercambio},{fotoProducto},{usuarioProducto},{estadoProducto}) "
-        cursor.execute(insertDato)
+        insertDato = """INSERT INTO productos (descripcion, categoria, interesDeIntercambio, fotoProducto, usuarioProducto, estadoProducto) 
+                                    VALUES (%s, %s, %s, %s, %s, %s) """
+        record = ( descripcion, fotoProducto, categoria, interesDeIntercambio, usuarioProducto, estadoProducto)
+        cursor.execute(insertDato, record)
         connection.commit()
+        print('el producto fue subido con exito!!!')
         cursor.close()
         connection.close()
     

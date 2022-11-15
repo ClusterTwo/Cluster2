@@ -1,0 +1,150 @@
+/* Estilo general */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:focus{
+    outline: none;
+}
+
+body {
+    background: #c6bfa6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* caja de contenido 
+.contenido-prod{
+    width: 1050px;
+    height: 530;
+    margin: 50px auto;
+    display: flex;
+
+    background: #929D79;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}*/
+
+.contenido-prod{
+    display: flex;
+    overflow: hidden;
+}
+
+/* foto de producto */
+.producto{
+    width: 38%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto h1{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.img-container{
+    height: 80%;
+    width: 80%; 
+    border: 1px solid rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.producto button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+    background-color: #929D79;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    color: #fff;
+    font-size: 16px;
+    font-family: "montserrat";
+    font-weight: 20;
+}
+
+/* info de producto */
+.formulario {
+    width: 62%;
+    padding: 30px 40px;
+}
+
+.formulario h2{
+    margin-bottom: 60px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+    color: #fff;
+}
+
+.formulario .info{
+    display: flex;
+    flex-direction: column;
+    color: transparent;
+}
+
+.formulario label{
+    font-weight: 20;
+    color: #fff;
+}
+
+.formulario .info textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+
+.formulario .info input,
+.formulario .info textarea{
+    width: 100%;
+    padding: 8px 0 5px;
+    margin-bottom: 20px;
+    background: transparent;
+
+    border: none;
+    border-bottom: 2px solid #fff;
+    
+    font-family: sans-serif;
+    color: hsla(0, 0%, 35%, 0.555);
+    font-size: 14px;
+    font-weight: 20;
+}
+
+.formulario .info input[type="submit"]{
+    width: 180px;
+    background: #929D79;
+    padding: 10px;
+    align-self: flex-end;
+    border-radius: 5px;
+    border: none;
+
+    color: #fff;
+    font-size: 16px;
+    font-family: "montserrat";
+    font-weight: 20;
+    cursor: pointer;
+}

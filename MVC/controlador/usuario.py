@@ -1,6 +1,7 @@
 from sys import path
 path.append('c:\\users\\pablo\\appdata\\local\\programs\\python\\python310\\lib\\site-packages')
 import mysql.connector 
+from modulacion.clases import *
 
 #cargar usuario
 nuevoUsuario = User(
@@ -13,8 +14,7 @@ nuevoUsuario = User(
         nivelUsuario = input("ingrese el valor de usuario: "),
         localidad = input('ingresa tu ciudad: ')
         )
-    
-
+      
 #cambio de correo electronico
 def cambioDeEmail(email,idUsuario):
     try:

@@ -5,6 +5,8 @@ import mysql.connector
 from controlador.productos import *
 from email.mime import image
 from errno import EADDRNOTAVAIL
+import uuid
+
 
 
 class User():
@@ -22,7 +24,7 @@ class User():
 
     def __init__(self, email, password, 
         nombre, apellido,fotoPerfil, telefono, nivelUsuario, localidad):
-
+        self.idUsuario = uuid.uuid4()
         self.email = email
         self.password = password
         self.nombre = nombre
